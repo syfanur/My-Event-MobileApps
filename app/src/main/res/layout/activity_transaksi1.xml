@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".transaksi1">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_large"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="299dp">
+
+    <TextView
+        android:id="@+id/judul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxLines="2"
+        android:textColor="@color/orange"
+        android:textSize="@dimen/text_size_expanded_title_medium"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/layout_margin_extra_large"
+        tools:text="My EVENT" />
+
+    <LinearLayout
+        android:id="@+id/linear2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/layout_margin_extra_large"
+        android:background="@color/orange"
+        android:padding="@dimen/padding_large"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="299dp">
+
+        <TextView
+            android:id="@+id/transaksi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/layout_margin_extra_large"
+            tools:text="Transaksi Pembayaran" />
+
+        <LinearLayout
+            android:id="@+id/linear3"
+            android:layout_width="354dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_margin_extra_large"
+            android:background="@color/orange"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_large"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="299dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="191dp"
+                android:layout_height="60dp"
+                android:background="@color/white">
+
+                <Button
+                    android:id="@+id/tambah"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/black"
+                    android:text="+"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/kurang"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/black"
+                    android:text="-"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/ticket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:text="PLF Ticket"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="40dp"
+                android:layout_height="60dp"
+                android:background="@color/indian_red">
+
+                <TextView
+                    android:id="@+id/jumlah"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:text="x1"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="90dp"
+                android:layout_height="60dp"
+                android:background="@color/yellow_green">
+
+                <TextView
+                    android:id="@+id/harga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="Rp. 100.000"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            tools:text="---------------------------------------------------------------------
+            \nTransaksi Pembayaran
+            \nHarga Tiket : 100.000
+            \nAdmin Fee   : 2.000
+            \nTotal       : 102.000" />
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="170dp"
+            android:text="Cancel" />
+
+        <Button
+            android:id="@+id/order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/indian_red"
+            android:textStyle="bold"
+            android:text="Order" />
+
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
