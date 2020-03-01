@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".transaksi1"></activity>
+        <activity android:name=".desc_event"></activity>
+        <activity android:name=".transaksi1" />
         <activity android:name=".DetailEvent" />
         <activity android:name=".Welcome" />
         <activity android:name=".MainActivity">
