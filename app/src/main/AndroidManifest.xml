@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+<<<<<<< HEAD
         <activity android:name=".DetailEvent"></activity>
+=======
+        <activity android:name=".transaksi1"></activity>
+        <activity android:name=".DetailEvent" />
+>>>>>>> ecf215788ed521154c01afa3952251f48fa16c3f
         <activity android:name=".Welcome" />
         <activity android:name=".MainActivity">
             <intent-filter>
