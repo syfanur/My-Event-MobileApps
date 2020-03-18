@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">My Event</string>
+
+    <string-array name="bahasa_arrays">
+        <item>Indonesia</item>
+        <item>English</item>
+    </string-array>
 </resources>

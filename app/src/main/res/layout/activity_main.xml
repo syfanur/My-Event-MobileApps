@@ -11,41 +11,29 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="Transaksi"
         tools:layout_editor_absoluteX="238dp"
         tools:layout_editor_absoluteY="104dp"
         android:onClick="transaksi"/>
-
-
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="82dp"
-        tools:layout_editor_absoluteY="102dp"
-        android:layout_below="@id/button2"
-        android:onClick="desc"/>
 
     <Button
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="Welcome"
         tools:layout_editor_absoluteX="82dp"
         tools:layout_editor_absoluteY="179dp"
-        android:layout_below="@id/button"
+        android:layout_below="@id/button2"
         android:onClick="welcome"/>
 
     <Button
         android:id="@+id/button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="List"
         tools:layout_editor_absoluteX="236dp"
         tools:layout_editor_absoluteY="181dp"
         android:layout_below="@id/button3"
-        android:onClick="eventlist"/>
+        android:onClick="list"/>
 
 </RelativeLayout>

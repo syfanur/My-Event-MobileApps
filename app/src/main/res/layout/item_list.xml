@@ -1,58 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="10px">
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="@dimen/padding_large"
-        >
-
-    <TextView
-        android:id="@+id/brand"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:maxLines="2"
-        android:textColor="@color/orange"
-        android:textSize="@dimen/text_size_expanded_title_medium"
-        android:textStyle="bold"
-        android:layout_marginTop="@dimen/layout_margin_extra_large"
-        android:text="My EVENT" />
-
-        <TextView
-            android:id="@+id/music"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:maxLines="2"
-            android:textColor="@color/black"
-            android:textSize="@dimen/text_size_expanded_title_medium"
-            android:textStyle="bold"
-            android:layout_marginTop="@dimen/layout_margin_extra_large"
-            android:text="Music" />
-
-    <LinearLayout
-        android:id="@+id/linear2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_marginTop="@dimen/layout_margin_medium"
-        android:background="@color/light_grey"
-        android:padding="@dimen/padding_large"
-        >
-
-
+    android:layout_height="match_parent">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white">
-        <ImageView
+        <ImageButton
             android:id="@+id/poster"
             android:layout_margin="10px"
             android:layout_width="90dp"
@@ -103,7 +59,5 @@
                 android:layout_below="@id/tanggal"/>
         </RelativeLayout>
     </RelativeLayout>
-    </LinearLayout>
-    </LinearLayout>
 
-</RelativeLayout>
+</LinearLayout>
