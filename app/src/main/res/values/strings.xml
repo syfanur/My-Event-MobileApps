@@ -1,8 +1,16 @@
 <resources>
-    <string name="app_name">My Event</string>
-
+    <string name="app_name">CobaApp</string>
+    <string name="welcome">Welcoming Page</string>
+    <string name="transaksi">Transaksi</string>
+    <string name="setting">Setting</string>
+    <string name="list">List Event</string>
     <string-array name="bahasa_arrays">
         <item>Indonesia</item>
         <item>English</item>
+    </string-array>
+
+    <string-array name="mode_arrays">
+        <item>Dark</item>
+        <item>Light</item>
     </string-array>
 </resources>

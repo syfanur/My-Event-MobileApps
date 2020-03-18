@@ -36,4 +36,14 @@
         android:layout_below="@id/button3"
         android:onClick="list"/>
 
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Setting"
+        tools:layout_editor_absoluteX="236dp"
+        tools:layout_editor_absoluteY="181dp"
+        android:layout_below="@id/button4"
+        android:onClick="setting"/>
+
 </RelativeLayout>
