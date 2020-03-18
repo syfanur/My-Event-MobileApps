@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CobaApp</string>
+    <string name="app_name">My Event</string>
     <string name="welcome">Welcoming Page</string>
     <string name="transaksi">Transaksi</string>
     <string name="setting">Setting</string>

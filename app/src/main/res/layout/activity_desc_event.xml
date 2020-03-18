@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -19,7 +19,7 @@
         <ImageView
             android:id="@+id/movieImg"
             android:layout_margin="10px"
-            android:layout_width="400dp"
+            android:layout_width="match_parent"
             android:layout_height="200dp"
             android:src="@drawable/playlistlove"
             android:scaleType="fitXY"/>
@@ -28,61 +28,132 @@
         android:id="@+id/linear3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/light_grey"
-        android:orientation="horizontal"
+        android:background="@color/white_smoke"
+        android:orientation="vertical"
         android:padding="@dimen/padding_large"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="299dp">
 
         <TextView
-            android:id="@+id/detail"
+            android:id="@+id/judul"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:textSize="16sp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            tools:text="Playlist Love Festival 2020
-            \nby DJOJOKARSONO GROUP
-            \n2 Februari 2020
-            \n12.00 WIB
-            \nTNI UN Husein Sastranegara
-            \nTicket Left: 3
-            \n \n Deskripsi Acara
-            \n Playlist love festival adalah festival besar
-            yang diselenggarakan di Bandung. Akan
-            ada penampilan Agnez Mo, Calum Scott,
-            Epik High, Phum Viphurit, MYMP, Sheila On
-            7, Raisa, Afgan, Glenn Fredly, dan masih
-            banyak lagi.
-            \nAcara ini diselenggarakan pada tanggal 2
-            Februari 2020 di Pangakalan Udara TNI AU
-            Setting Discover Browse"
-            />
+            android:text="Playlist Love Festival 2020"/>
 
+        <TextView
+            android:id="@+id/penyelenggara"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dark_gray"
+            android:textSize="16sp"
+            android:text="by DJOJOKARSONO"/>
 
-    </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
+            <TextView
+                android:id="@+id/tanggal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:text="2 Februari 2020"/>
+
+            <TextView
+                android:id="@+id/jam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginLeft="15dp"
+                android:text="12:00 WIB"/>
+
+            <TextView
+                android:id="@+id/tiket"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginLeft="15dp"
+                android:text="Ticket Left : 1"/>
+        </LinearLayout>
 
         <Button
-            android:id="@+id/harga"
+            android:id="@+id/tempat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Rp. 100.000" />
+            android:textColor="@color/orange"
+            android:text="TNI AU Husein Sastranagara"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+        <TextView
+            android:id="@+id/deskripsi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Deskripsi Acara"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:id="@+id/deskripsi1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Playlist love festival adalah festival besar
+yang diselenggarakan di Bandung. Akan
+ada penampilan Agnez Mo, Calum Scott,
+Epik High, Phum Viphurit, MYMP, Sheila On
+7, Raisa, Afgan, Glenn Fredly, dan masih
+banyak lagi.
+
+\n
+Acara ini diselenggarakan pada tanggal 2
+Februari 2020 di Pangakalan Udara TNI AU
+Setting Discover Browse"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/dark_gray"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/layout_margin_large">
+
+        <Button
+            android:id="@+id/harga"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@color/orange"
+            android:text="Rp. 100.000"
+            android:paddingLeft="@dimen/layout_margin_extra_large"
+            android:paddingRight="@dimen/layout_margin_extra_large"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"/>
 
         <Button
             android:id="@+id/attend"
-            android:layout_width="match_parent"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/layout_margin_extra_large"
+            android:paddingRight="@dimen/layout_margin_extra_large"
+            android:layout_marginLeft="20dp"
             android:background="@color/orange"
             android:textStyle="bold"
             android:text="ATTEND" />
 
+        </LinearLayout>
+
     </LinearLayout>
 
 
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

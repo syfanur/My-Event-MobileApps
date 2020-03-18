@@ -13,7 +13,6 @@
         <activity android:name=".Setting" />
         <activity android:name=".desc_event" />
         <activity android:name=".transaksi1" />
-        <activity android:name=".DetailEvent" />
         <activity android:name=".Welcome" />
         <activity android:name=".MainActivity">
             <intent-filter>

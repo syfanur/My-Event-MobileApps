@@ -36,4 +36,10 @@ public class MainActivity extends AppCompatActivity {
         Intent e = new Intent(getApplicationContext(),ListEvent.class);
         startActivity(e);
     }
+
+
+    public void desc(View view) {
+        Intent e = new Intent(getApplicationContext(),desc_event.class);
+        startActivity(e);
+    }
 }
