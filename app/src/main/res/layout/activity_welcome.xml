@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,8 +12,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="@dimen/padding_large"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="299dp">
+        >
 
         <TextView
             android:id="@+id/judul"
@@ -25,7 +24,7 @@
             android:textSize="@dimen/text_size_expanded_title_medium"
             android:textStyle="bold"
             android:layout_marginTop="@dimen/layout_margin_extra_large"
-            tools:text="My EVENT" />
+            android:text="My EVENT" />
 
         <ImageView
             android:id="@+id/eventImage"
@@ -34,7 +33,7 @@
             android:layout_marginBottom="@dimen/layout_margin_medium"
             android:padding="@dimen/padding_extra_large"
             android:scaleType="centerCrop"
-            tools:src="@drawable/welcom" />
+            android:src="@drawable/welcom" />
 
         <TextView
             android:id="@+id/desc1"
@@ -44,7 +43,7 @@
             android:maxLines="2"
             android:textSize="@dimen/text_size_expanded_title_medium"
             android:textStyle="bold"
-            tools:text="Let's attend your" />
+            android:text="Let's attend your" />
 
         <TextView
             android:id="@+id/desc2"
@@ -54,7 +53,7 @@
             android:maxLines="2"
             android:textSize="@dimen/text_size_expanded_title_medium"
             android:textStyle="bold"
-            tools:text="favorite event." />
+            android:text="favorite event." />
 
         <TextView
             android:layout_width="match_parent"
@@ -65,9 +64,10 @@
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:background="@color/orange"
             android:text="Get Started"
+            android:textSize="@dimen/layout_margin_large"
             android:textColor="@color/white" />
 
 
@@ -77,4 +77,4 @@
 
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
