@@ -1,4 +1,4 @@
-package com.example.myevent;
+package com.example.myeventeducation;
 
 import org.junit.Test;
 
