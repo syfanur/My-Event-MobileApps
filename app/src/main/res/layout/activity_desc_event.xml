@@ -147,6 +147,7 @@ Setting Discover Browse"
             android:layout_marginLeft="20dp"
             android:background="@color/orange"
             android:textStyle="bold"
+            android:onClick="attend"
             android:text="ATTEND" />
 
         </LinearLayout>
