@@ -161,7 +161,7 @@
                 />
 
             <Button
-                android:id="@+id/order"
+                android:id="@+id/konfirmasi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/indian_red"
