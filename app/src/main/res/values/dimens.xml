@@ -90,4 +90,7 @@
     <dimen name="spinner_height">30dp</dimen>
 
     <dimen name="ticket_width">326dp</dimen>
+
+<!--    button -->
+        <dimen name="button_size">30dp</dimen>
 </resources>

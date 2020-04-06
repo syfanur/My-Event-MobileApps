@@ -16,11 +16,26 @@
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="299dp">
 
+
+        <TextView
+            android:id="@+id/juduul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxLines="2"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/text_size_expanded_title_medium"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/layout_margin_extra_large"
+            android:layout_marginBottom="15dp"
+            android:text="Deskripsi Event" />
+
         <ImageView
             android:id="@+id/movieImg"
             android:layout_margin="10px"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="30dp"
             android:src="@drawable/playlistlove"
             android:scaleType="fitXY"/>
 
@@ -99,6 +114,7 @@
             android:layout_height="wrap_content"
             android:text="Deskripsi Acara"
             android:layout_marginLeft="15dp"
+            android:layout_marginTop="@dimen/layout_margin_large"
             android:textColor="@color/black"
             />
 
@@ -111,12 +127,7 @@ yang diselenggarakan di Bandung. Akan
 ada penampilan Agnez Mo, Calum Scott,
 Epik High, Phum Viphurit, MYMP, Sheila On
 7, Raisa, Afgan, Glenn Fredly, dan masih
-banyak lagi.
-
-\n
-Acara ini diselenggarakan pada tanggal 2
-Februari 2020 di Pangakalan Udara TNI AU
-Setting Discover Browse"
+banyak lagi."
             android:layout_marginLeft="15dp"
             android:textColor="@color/dark_gray"
             />
@@ -125,13 +136,14 @@ Setting Discover Browse"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="@dimen/layout_margin_large">
+            android:layout_marginTop="35dp">
 
         <Button
             android:id="@+id/harga"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:background="@color/orange"
+            android:layout_marginStart="30dp"
             android:text="Rp. 100.000"
             android:paddingLeft="@dimen/layout_margin_extra_large"
             android:paddingRight="@dimen/layout_margin_extra_large"
