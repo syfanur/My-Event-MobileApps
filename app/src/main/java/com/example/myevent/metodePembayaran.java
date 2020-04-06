@@ -13,9 +13,11 @@ public class metodePembayaran extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_metode_pembayaran);
 
+        setTitle("Detail Pembayaran");
     }
-    public void clickList(View view) {
-        startActivity(new Intent(this, VerifikasiPembayaran.class));
+    public void clickList (View view) {
+        startActivity(new Intent(this, Detailbayar.class));
+
 
     }
 }

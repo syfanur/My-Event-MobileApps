@@ -10,7 +10,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="513dp"
+        android:layout_height="675dp"
         android:background="@android:color/black"
         android:orientation="vertical"
         android:padding="16dp">
@@ -31,15 +31,16 @@
             android:layout_width="match_parent"
             android:layout_height="66dp"
             android:layout_marginTop="50dp"
-            android:text="@string/virtual_account_mandiri"
-            android:onClick="clickList"/>
+            android:onClick="clickList"
+            android:text="@string/virtual_account_mandiri" />
 
         <Button
             android:id="@+id/button7"
             android:layout_width="match_parent"
             android:layout_height="66dp"
             android:layout_marginTop="5dp"
-            android:text="@string/google_pay" />
+            android:text="@string/google_pay"
+          />
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

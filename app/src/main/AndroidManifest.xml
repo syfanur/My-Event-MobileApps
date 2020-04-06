@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".VerifikasiPembayaran"></activity>
+        <activity android:name=".Detailbayar"></activity>
+        <activity android:name=".VerifikasiPembayaran" />
         <activity android:name=".metodePembayaran" />
         <activity android:name=".Register" />
         <activity

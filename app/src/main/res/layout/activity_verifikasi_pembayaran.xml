@@ -79,10 +79,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="10dp"
         android:background="#FFCF40"
+        android:text="@string/selesai"
         android:onClick="clickList"
-        android:text="@string/selesai" />
+        android:layout_marginBottom="10dp"/>
 
 </LinearLayout>
 
