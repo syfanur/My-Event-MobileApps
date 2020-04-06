@@ -2,7 +2,9 @@ package com.example.myevent;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import java.util.ArrayList;
@@ -58,6 +60,11 @@ public class ListEvent extends AppCompatActivity {
 
 
 
+    }
+
+    public void event(View view) {
+        Intent e = new Intent(getApplicationContext(),desc_event.class);
+        startActivity(e);
     }
 }
 
