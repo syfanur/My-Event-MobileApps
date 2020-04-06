@@ -10,15 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".VerifikasiPembayaran"></activity>
-        <activity android:name=".editProfile1" />
-        <activity android:name=".editProfile" />
         <activity android:name=".metodePembayaran" />
         <activity android:name=".Register" />
-        <activity android:name=".LoginPage" />
         <activity
             android:name=".ui.login.LoginActivity"
             android:label="@string/title_activity_login" />
-        <activity android:name=".Login" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

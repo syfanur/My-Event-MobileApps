@@ -16,33 +16,18 @@
 
         />
 
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:layout_marginTop="20dp"
-        android:text="Send Us Your Feedback!"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:text="Metode Pembayaran"
+        android:onClick="clickList"/>
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:text="We all need people who will give us feedback. That's how we improve"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:layout_marginTop="30dp"
-        android:text="How was your experience?"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-
+        android:text="Verifikasi"
+        android:onClick="clickList"/>
 
 </LinearLayout>

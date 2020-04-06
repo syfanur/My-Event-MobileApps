@@ -17,16 +17,17 @@
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="wrap_content"/>
 
     <TextView
         android:id="@+id/textView33"
         android:layout_width="347dp"
-        android:layout_height="201dp"
+        android:layout_height="148dp"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
         android:background="#FFAB40"
         android:text="Complete Payment in"
+        android:textAlignment="center"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textStyle="normal|bold" />
 
@@ -56,19 +57,21 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
-        android:text="TRANSFER TO"
+        android:text="@string/transfer_to"
         android:textSize="18sp" />
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="wrap_content"/>
 
     <TextView
         android:layout_width="192dp"
-        android:layout_height="94dp"
+        android:layout_height="49dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
-        android:text="MY EVENT MANDIRI"
+        android:text="@string/my_event_mandiri"
+        android:textAlignment="center"
+        android:textColor="@android:color/black" />
 
     <Button
         android:id="@+id/button5"
@@ -76,12 +79,11 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
         android:background="#FFCF40"
-        android:text="Button" />
+        android:onClick="clickList"
+        android:text="@string/selesai" />
 
 </LinearLayout>
 
 
-
-
-</LinearLayout>

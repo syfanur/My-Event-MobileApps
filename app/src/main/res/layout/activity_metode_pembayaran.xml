@@ -1,9 +1,45 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="fill_parent"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#f59d57"
+    app:cardCornerRadius="5dp"
+    android:layout_marginTop="90dp"
     android:orientation="vertical">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="513dp"
+        android:background="@android:color/black"
+        android:orientation="vertical"
+        android:padding="16dp">
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/pembayaran_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="80dp"
+            android:textColor="#FFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:text="Pilih Metode Pembayaran" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:layout_marginTop="50dp"
+            android:text="@string/virtual_account_mandiri"
+            android:onClick="clickList"/>
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/google_pay" />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
