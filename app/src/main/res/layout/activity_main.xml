@@ -1,60 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingTop="?attr/actionBarSize">
+    android:orientation="vertical"
+    >
 
-    <TextView
-        android:id="@+id/settings_textview"
+    <Button
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Settings"
-        android:textSize="17sp"
-        tools:layout_editor_absoluteX="336dp"
-        tools:layout_editor_absoluteY="646dp" />
-
-    <TextView
-        android:id="@+id/browse_textview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Browse"
-        android:textSize="17sp"
-        tools:layout_editor_absoluteX="176dp"
-        tools:layout_editor_absoluteY="648dp" />
-
-    <TextView
-        android:id="@+id/discover_textview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Discover"
-        android:textSize="17sp"
-        tools:layout_editor_absoluteX="7dp"
-        tools:layout_editor_absoluteY="648dp" />
-
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="68dp"
-        android:layout_height="65dp"
-        app:srcCompat="@android:drawable/ic_menu_preferences"
-        tools:layout_editor_absoluteX="336dp"
-        tools:layout_editor_absoluteY="575dp" />
-
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="70dp"
-        android:layout_height="59dp"
-        app:srcCompat="@android:drawable/ic_menu_revert"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
-
-    <ImageButton
-        android:id="@+id/imageButton3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/ic_search_category_default"
-        tools:layout_editor_absoluteX="169dp"
-        tools:layout_editor_absoluteY="581dp" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:text="Education"
+        tools:layout_editor_absoluteX="238dp"
+        tools:layout_editor_absoluteY="104dp"
+        android:onClick="education"/>
+</LinearLayout>

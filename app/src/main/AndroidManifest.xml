@@ -9,6 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".workshop"></activity>
+        <activity android:name=".seminar" />
+        <activity android:name=".education" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name">
