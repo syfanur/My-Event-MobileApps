@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".workshop"></activity>
+        <activity android:name=".detailsevent"></activity>
+        <activity android:name=".workshop" />
         <activity android:name=".seminar" />
         <activity android:name=".education" />
         <activity

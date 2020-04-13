@@ -53,7 +53,7 @@ public class workshop extends AppCompatActivity {
             map.put("poster", Poster[i]);
             mylist.add(map);
         }
-        adapter = new SimpleAdapter(this, mylist, R.layout.activity_item_list,
+        adapter = new SimpleAdapter(this, mylist, R.layout.itemlist,
                 new String[]{"judul", "alamat", "tanggal", "tiket", "poster"}, new int[]
                 {R.id.judul,(R.id.alamat),(R.id.tanggal),(R.id.tiket),(R.id.poster)});
         listView.setAdapter(adapter);
