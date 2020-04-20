@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/idPass"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    =<TextView
+        android:id="@+id/regist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="REGISTER"
+        android:textColor="@android:color/black"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="103dp"
+        tools:layout_editor_absoluteY="78dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="205dp"
+        android:layout_height="172dp"
+        app:srcCompat="@drawable/logo"
+        tools:layout_editor_absoluteX="103dp"
+        tools:layout_editor_absoluteY="159dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="415dp"
+        android:layout_height="41dp"
+        app:srcCompat="@drawable/tab"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="4dp" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="332dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Nama Lengkap"
+        android:textSize="14sp"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="340dp" />
+
+    <EditText
+        android:id="@+id/userId"
+        android:layout_width="329dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Username"
+        android:textSize="14sp"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="389dp" />
+
+    <EditText
+        android:id="@+id/idAddress"
+        android:layout_width="327dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Email Address"
+        android:textSize="14sp"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="432dp" />
+
+    <EditText
+        android:id="@+id/idPass"
+        android:layout_width="326dp"
+        android:layout_height="53dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Password"
+        android:textSize="14sp"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="480dp" />
+
+    <EditText
+        android:id="@+id/idConfPass"
+        android:layout_width="326dp"
+        android:layout_height="53dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Confirm Password"
+        android:textSize="14sp"
+        tools:layout_editor_absoluteX="43dp"
+        tools:layout_editor_absoluteY="533dp" />
+
+    <Button
+        android:id="@+id/buttonRegist"
+        android:layout_width="107dp"
+        android:layout_height="51dp"
+        android:background="@android:color/holo_orange_light"
+        android:text="REGISTER"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.947"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="617dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
