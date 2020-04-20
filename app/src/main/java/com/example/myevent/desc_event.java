@@ -15,7 +15,10 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
+
 public class desc_event extends AppCompatActivity {
+
+
     /*Deklarasi variable*/
     Button btn_navigasi;
     String goolgeMap = "com.google.android.apps.maps"; // identitas package aplikasi google masps android
@@ -28,6 +31,20 @@ public class desc_event extends AppCompatActivity {
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_desc_event);
+
+        // Initialize the views.
+        TextView Judul = findViewById(R.id.text_pameran);
+        ImageView Poster = findViewById(R.id.view_bigevent);
+
+        // Set the text from the Intent extra.
+        Judul.setText(getIntent().getStringExtra("title"));
+
+        // Load the image using the Glide library and the Intent extra.
+        Glide.with(this)
+                .load(getIntent()
+                        .getIntExtra("image_resource",0))
+                .into(Poster);
+
 
         // menyamakan variable pada layout activity_main.xml
         btn_navigasi    = (Button) findViewById(R.id.btn_navigasi);

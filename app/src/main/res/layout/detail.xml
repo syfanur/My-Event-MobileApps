@@ -4,14 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/detail_event"
     android:background="@color/antique_white"
     >
 
-    <ImageView
+    <View
         android:id="@+id/view_bigevent"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="428dp"
+        android:layout_height="303dp"
         android:layout_marginBottom="444dp"
+        android:background="@drawable/playlistlove"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.529"
@@ -39,8 +41,8 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.107"
-        app:layout_constraintStart_toStartOf="@+id/view_tanggal"
+        app:layout_constraintHorizontal_bias="0.315"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.34" />
 
@@ -177,7 +179,7 @@
         android:id="@+id/text_free"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="100000"
+        android:text="@string/free_entry"
         android:textColor="#FFFFFF"
         android:textSize="15sp"
         android:textStyle="bold"
