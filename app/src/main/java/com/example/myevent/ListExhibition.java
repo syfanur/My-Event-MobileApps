@@ -1,17 +1,13 @@
 package com.example.myevent;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class metodePembayaran extends AppCompatActivity {
-
+public class ListExhibition extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_metode_pembayaran);
-
+        setContentView(R.layout.activity_list_exhibiton);
     }
 }

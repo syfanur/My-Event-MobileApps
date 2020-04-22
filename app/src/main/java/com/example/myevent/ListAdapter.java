@@ -84,6 +84,9 @@ class ViewHolder extends RecyclerView.ViewHolder
     // Member Variables for the TextViews
     private TextView judul;
     private TextView tempat;
+    private TextView tanggal;
+    private TextView tiket;
+    private TextView harga;
     private ImageView poster;
 
     /**
@@ -98,6 +101,8 @@ class ViewHolder extends RecyclerView.ViewHolder
         judul = itemView.findViewById(R.id.judul);
         tempat = itemView.findViewById(R.id.alamat);
         poster = itemView.findViewById(R.id.poster);
+        tanggal = itemView.findViewById(R.id.tanggal);
+        tiket = itemView.findViewById(R.id.tiket);
 
         // Set the OnClickListener to the entire view.
         itemView.setOnClickListener(this);
@@ -107,6 +112,8 @@ class ViewHolder extends RecyclerView.ViewHolder
         // Populate the textviews with data.
         judul.setText(currentMusik.getTitle());
         tempat.setText(currentMusik.getInfo());
+        tiket.setText(currentMusik.getTiket());
+        tanggal.setText(currentMusik.getTanggal());
 
         // Load the images into the ImageView using the Glide library.
         Glide.with(mContext).load(
@@ -124,6 +131,12 @@ class ViewHolder extends RecyclerView.ViewHolder
         Musik currentMusik = mMusicData.get(getAdapterPosition());
         Intent detailIntent = new Intent(mContext, desc_event.class);
         detailIntent.putExtra("title", currentMusik.getTitle());
+        detailIntent.putExtra("tempat", currentMusik.getInfo());
+        detailIntent.putExtra("penyelenggara", currentMusik.getBy());
+        detailIntent.putExtra("tgl", currentMusik.getTgl());
+        detailIntent.putExtra("bulan", currentMusik.getBulan());
+        detailIntent.putExtra("jam", currentMusik.getJam());
+        detailIntent.putExtra("harga", currentMusik.getHarga());
         detailIntent.putExtra("image_resource",
                 currentMusik.getImageResource());
         mContext.startActivity(detailIntent);

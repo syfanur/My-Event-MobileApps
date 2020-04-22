@@ -1,7 +1,7 @@
 package com.example.myevent;
 
 
-public class Musik {
+public class seminar {
 
     private String title;
     private String info;
@@ -10,11 +10,11 @@ public class Musik {
 
     private int imageResource;
 
-    public Musik(){
+    public seminar(){
 
     }
 
-    public Musik(String title, String info, String tanggal, String tiket, String penyelenggara,
+    public seminar(String title, String info, String tanggal, String tiket, String penyelenggara,
                  String bulan, String tanggaal, String jam, String harga, int imageResource) {
         this.title = title;
         this.info = info;

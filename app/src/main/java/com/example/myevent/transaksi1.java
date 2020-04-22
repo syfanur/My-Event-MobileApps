@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,6 +28,14 @@ public class transaksi1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transaksi1);
+
+        // Initialize the views.
+        TextView Judul = findViewById(R.id.ticket);
+        TextView Harga = findViewById(R.id.biaya);
+
+        // Set the text from the Intent extra.
+        Judul.setText("Archatala");
+        Harga.setText("200000");
 
         btAlert = (Button) findViewById(R.id.konfirmasi);
         btAlert.setOnClickListener(new View.OnClickListener() {
@@ -54,7 +63,7 @@ public class transaksi1 extends AppCompatActivity {
                 .setPositiveButton("Ya",new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog,int id) {
                         // jika tombol diklik, maka akan berpindah ke activity selanjutnya
-                        Intent e = new Intent(getApplicationContext(),transaksi1.class);
+                        Intent e = new Intent(getApplicationContext(),metodePembayaran.class);
                         startActivity(e);
                     }
                 })
@@ -105,7 +114,7 @@ public class transaksi1 extends AppCompatActivity {
     }
 
     private int calculateprice(){//jumlah pesanan * harga
-        int harga=100000;
+        int harga=200000;
 
         return quantity * harga;
     }

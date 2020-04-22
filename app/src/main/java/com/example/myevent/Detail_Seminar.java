@@ -16,7 +16,7 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 
 
-public class desc_event extends AppCompatActivity {
+public class Detail_Seminar extends AppCompatActivity {
 
 
     /*Deklarasi variable*/
@@ -77,7 +77,7 @@ public class desc_event extends AppCompatActivity {
                 if (mapIntent.resolveActivity(getPackageManager()) != null) {
                     startActivity(mapIntent);
                 } else {
-                    Toast.makeText(desc_event.this, "Google Maps Belum Terinstal. Install Terlebih dahulu.",
+                    Toast.makeText(Detail_Seminar.this, "Google Maps Belum Terinstal. Install Terlebih dahulu.",
                             Toast.LENGTH_LONG).show();
                 }
             }

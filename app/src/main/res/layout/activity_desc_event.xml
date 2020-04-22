@@ -103,6 +103,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.483" />
 
+
     <Button
         android:id="@+id/btn_navigasi"
         android:layout_width="wrap_content"
@@ -114,11 +115,11 @@
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.224"
+        app:layout_constraintEnd_toEndOf="@+id/view_tanggal"
+        app:layout_constraintHorizontal_bias="0.043"
         app:layout_constraintStart_toEndOf="@+id/view_jadwal"
         app:layout_constraintTop_toTopOf="@+id/view_tanggal"
-        app:layout_constraintVertical_bias="0.03" />
+        app:layout_constraintVertical_bias="0.035" />
 
     <ImageView
         android:id="@+id/view_jam"
@@ -174,7 +175,7 @@
 
 
     <TextView
-        android:id="@+id/text_free"
+        android:id="@+id/harga"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="100000"
@@ -220,12 +221,13 @@
         android:layout_width="335dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:text="Playlist love festival adalah festival besar
-yang diselenggarakan di Bandung. Akan
-ada penampilan Agnez Mo, Calum Scott,
-Epik High, Phum Viphurit, MYMP, Sheila On
-7, Raisa, Afgan, Glenn Fredly, dan masih
-banyak lagi."
+        android:text="Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit, sed do eiusmod tempor incididunt
+        ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in
+        voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Excepteur sint occaecat cupidatat non proident"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
