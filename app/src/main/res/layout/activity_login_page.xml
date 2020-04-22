@@ -7,26 +7,28 @@
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="16dp"
-        android:layout_gravity="left"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="30dp"
+        android:textColor="#FF9900"
         android:text="myEVENT"
+        android:textStyle="bold"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textStyle="normal" />
+         />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="left"
         app:srcCompat="@drawable/a"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"/>
 
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="left"
+        android:layout_gravity="center_horizontal"
         android:text="Login"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textSize="40sp"
@@ -37,7 +39,7 @@
         android:layout_width="336dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         android:ems="10"
         android:inputType="textEmailAddress"
         android:text="Email Address" />
@@ -66,6 +68,7 @@
         android:layout_gravity="center_horizontal"
         android:background="#FFC940"
         android:text="LOGIN TO MY ACCOUNT"
+        android:onClick="home"
         android:textColor="@android:color/white"
         android:textColorHint="#EEFF41"
         android:layout_marginTop="50dp"

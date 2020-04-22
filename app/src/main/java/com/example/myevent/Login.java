@@ -1,21 +1,22 @@
 package com.example.myevent;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class Welcome extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class Login  extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_welcome);
+        setContentView(R.layout.activity_login_page);
+
     }
 
-    public void next(View view) {
-        Intent next = new Intent(getApplicationContext(), Register.class);
+    public void home(View view) {
+        Intent next = new Intent(getApplicationContext(), Homepage.class);
         startActivity(next);
     }
 }

@@ -1,8 +1,0 @@
-<resources>
-    <string name="app_name">Forgot Password</string>
-    <string name="forgot">FORGOT PASSWORD?</string>
-    <string name="textforgot">We just need your email address to send your password reset instructions</string>
-    <string name="resetpass">RESET PASSWORD</string>
-    <string name="donthaveacc">Do not have an account?</string>
-    <string name="registernow">Register Now</string>
-</resources>

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 
 
@@ -39,7 +40,9 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void desc(View view) {
-        Intent e = new Intent(getApplicationContext(),desc_event.class);
+        Intent e = new Intent(getApplicationContext(),Homepage.class);
         startActivity(e);
     }
+
+
 }

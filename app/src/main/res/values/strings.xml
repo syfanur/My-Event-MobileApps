@@ -1,9 +1,8 @@
 <resources>
-    <string name="app_name">My Event</string>
-    <string name="welcome">Welcoming Page</string>
+    <string name="app_name" translatable="false">My Event</string>
+    <string name="welcome" translatable="false">Welcoming Page</string>
     <string name="transaksi">Transaksi</string>
-    <string name="setting">Setting</string>
-    <string name="list">List Event</string>
+    <string name="list" translatable="false">List Event</string>
     <string-array name="bahasa_arrays">
         <item>Indonesia</item>
         <item>English</item>
@@ -14,35 +13,94 @@
         <item>Light</item>
     </string-array>
 
-
-    <string-array name="judul">
+    <!--    EVENT MUSIK -->
+    <string-array name="music_judul">
         <item>Archatala</item>
         <item>ICONIC</item>
         <item>NAIF</item>
         <item>Playlist Love Festival</item>
     </string-array>
 
-    <string-array name="tempat">
+    <string-array name="music_tempat">
         <item>Bandung</item>
         <item>Sukapura</item>
         <item>Bojongsoang</item>
         <item>Sukabirus</item>
     </string-array>
 
-    <string-array name="tanggal">
+    <string-array name="music_tanggal">
         <item>1 Maret 2020</item>
         <item>6 Maret 2020</item>
         <item>20 April 2020</item>
         <item>31 Agustus 2020</item>
     </string-array>
 
-    <array name="poster">
+    <array name="music_poster">
         <item>@drawable/archatala</item>
         <item>@drawable/iconic</item>
         <item>@drawable/naif</item>
         <item>@drawable/playlistlove</item>
-
     </array>
+
+    <string-array name="music_penyelenggara">
+        <item>by Bandung Pelajar</item>
+        <item>by Merdeka Kencana</item>
+        <item>by Sinar Putih</item>
+        <item>by Djojokarsono</item>
+    </string-array>
+
+    <string-array name="music_bulan">
+        <item>JAN</item>
+        <item>AGS</item>
+        <item>MAR</item>
+        <item>FEB</item>
+    </string-array>
+
+    <string-array name="music_tgl">
+        <item>01</item>
+        <item>18</item>
+        <item>20</item>
+        <item>02</item>
+    </string-array>
+
+    <string-array name="music_jam">
+        <item>20.00 WIB | Available</item>
+        <item>19.00 WIB | Not Available</item>
+        <item>07.00 WIB | Available</item>
+        <item>12.00 WIB | Available</item>
+    </string-array>
+
+    <string-array name="music_tiket">
+        <item>Available</item>
+        <item>Not Available</item>
+        <item>Available</item>
+        <item>Available</item>
+    </string-array>
+
+    <string-array name="music_harga">
+        <item>200000</item>
+        <item>300000</item>
+        <item>50000</item>
+        <item>10000</item>
+    </string-array>
+
+    <string-array name="music_deskripsi">
+        <item>Archatala adalah festival besar
+yang diselenggarakan di Sukapura. Akan
+ada penampilan dari berbagai artis.</item>
+        <item>ICONIC adalah festival besar
+yang diselenggarakan di Bojongsoang.  Akan
+ada penampilan dari berbagai artis..</item>
+        <item>NAIF adalah festival besar
+yang diselenggarakan di Sukabirus.  Akan
+ada penampilan dari berbagai artis.</item>
+        <item>Playlist love festival adalah festival besar
+yang diselenggarakan di Bandung. Akan
+ada penampilan Agnez Mo, Calum Scott,
+Epik High, Phum Viphurit, MYMP, Sheila On
+7, Raisa, Afgan, Glenn Fredly, dan masih
+banyak lagi.</item>
+    </string-array>
 
     <string name="myevent_text">myEVENT</string>
     <string name="exhibition_text">Exhibition</string>
@@ -93,9 +151,177 @@
     <string name="art_text">Exhibition</string>
     <string name="yes_text">Yes</string>
     <string name="no_text">No</string>
+    <string name="tangtangan_bisnis">Menghadapi Tangtangan Bisnis 2020</string>
+    <string name="hosted_by">Hosted By: insightTDay</string>
+    <string name="person_text">100</string>
+    <string name="jam_text_hmpg">08.00 - selesai</string>
+    <string name="tanggal_text_hmpg">15</string>
+    <string name="bulan_text_hmpg">FEB</string>
+    <string name="text_desc">Description About Pameran Titik Tahun 2</string>
+    <string name="text_desc2">Description about Pameran Titik Tahun 2</string>
+    <string name="text_myevent2">myEVENT</string>
+    <string name="text_eventforyou">Event For You</string>
+    <string name="text_bestevent">Best on Trending Event</string>
+    <string name="text_myevent3">myEVENT</string>
+    <string name="text_started">Lets Attend Your Favourite Event</string>
+    <string name="text_getstarted">Get Started</string>
 
 
+    <!--    EVENT SEMINAR -->
+    <string-array name="sem_judul">
+        <item>Seminar 1</item>
+        <item>Seminar 2</item>
+        <item>Seminar 3</item>
+        <item>Seminar 4</item>
+    </string-array>
 
+    <string-array name="sem_tempat">
+        <item>Bandung</item>
+        <item>Sukapura</item>
+        <item>Bojongsoang</item>
+        <item>Sukabirus</item>
+    </string-array>
+
+    <string-array name="sem_tanggal">
+        <item>1 Maret 2020</item>
+        <item>6 Maret 2020</item>
+        <item>20 April 2020</item>
+        <item>31 Agustus 2020</item>
+    </string-array>
+
+    <array name="sem_poster">
+        <item>@drawable/seminarjuga</item>
+        <item>@drawable/seminar2</item>
+        <item>@drawable/seminar3</item>
+        <item>@drawable/perempuan</item>
+    </array>
+
+    <string-array name="sem_penyelenggara">
+        <item>by Bandung Pelajar</item>
+        <item>by Merdeka Kencana</item>
+        <item>by Sinar Putih</item>
+        <item>by Djojokarsono</item>
+    </string-array>
+
+    <string-array name="sem_bulan">
+        <item>JAN</item>
+        <item>AGS</item>
+        <item>MAR</item>
+        <item>FEB</item>
+    </string-array>
+
+    <string-array name="sem_tgl">
+        <item>01</item>
+        <item>18</item>
+        <item>20</item>
+        <item>02</item>
+    </string-array>
+
+    <string-array name="sem_jam">
+        <item>20.00 WIB | Available</item>
+        <item>19.00 WIB | Not Available</item>
+        <item>07.00 WIB | Available</item>
+        <item>12.00 WIB | Available</item>
+    </string-array>
+
+    <string-array name="sem_tiket">
+        <item>Available</item>
+        <item>Not Available</item>
+        <item>Available</item>
+        <item>Available</item>
+    </string-array>
+
+    <string-array name="sem_harga">
+        <item>200000</item>
+        <item>300000</item>
+        <item>50000</item>
+        <item>10000</item>
+    </string-array>
+
+    <string-array name="sem_deskripsi">
+        <item>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.".</item>
+        <item>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</item>
+        <item>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.".</item>
+        <item>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</item>
+    </string-array>
+
+    <!--    EVENT WORKSHOP -->
+    <string-array name="w_judul">
+        <item>Workshop 1</item>
+        <item>Workshop 2</item>
+        <item>Workshop 3</item>
+        <item>Workhsop 4</item>
+    </string-array>
+
+    <string-array name="w_tempat">
+        <item>Bandung</item>
+        <item>Sukapura</item>
+        <item>Bojongsoang</item>
+        <item>Sukabirus</item>
+    </string-array>
+
+    <string-array name="w_tanggal">
+        <item>1 Maret 2020</item>
+        <item>6 Maret 2020</item>
+        <item>20 April 2020</item>
+        <item>31 Agustus 2020</item>
+    </string-array>
+
+    <array name="w_poster">
+        <item>@drawable/seminarjuga</item>
+        <item>@drawable/seminar2</item>
+        <item>@drawable/seminar3</item>
+        <item>@drawable/perempuan</item>
+    </array>
+
+    <string-array name="w_penyelenggara">
+        <item>by Bandung Pelajar</item>
+        <item>by Merdeka Kencana</item>
+        <item>by Sinar Putih</item>
+        <item>by Djojokarsono</item>
+    </string-array>
+
+    <string-array name="w_bulan">
+        <item>JAN</item>
+        <item>AGS</item>
+        <item>MAR</item>
+        <item>FEB</item>
+    </string-array>
+
+    <string-array name="w_tgl">
+        <item>01</item>
+        <item>18</item>
+        <item>20</item>
+        <item>02</item>
+    </string-array>
+
+    <string-array name="w_jam">
+        <item>20.00 WIB | Available</item>
+        <item>19.00 WIB | Not Available</item>
+        <item>07.00 WIB | Available</item>
+        <item>12.00 WIB | Available</item>
+    </string-array>
+
+    <string-array name="w_tiket">
+        <item>Available</item>
+        <item>Not Available</item>
+        <item>Available</item>
+        <item>Available</item>
+    </string-array>
+
+    <string-array name="w_harga">
+        <item>200000</item>
+        <item>300000</item>
+        <item>50000</item>
+        <item>10000</item>
+    </string-array>
+
+    <string-array name="w_deskripsi">
+        <item>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.".</item>
+        <item>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</item>
+        <item>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.".</item>
+        <item>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</item>
+    </string-array>
 
 
 </resources>
