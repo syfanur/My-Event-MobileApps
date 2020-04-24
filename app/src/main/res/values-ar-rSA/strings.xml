@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">My Event</string>
-    <string name="welcome">Welcoming Page</string>
-    <string name="transaksi">Transaksi</string>
-    <string name="list">List Event</string>
+    <string name="text_setting">ضبط</string>
+    <string name="text_bahasa">لغة</string>
+    <string name="text_tema">المواضيع</string>
+
     <string name="myevent_text">myEVENT</string>
     <string name="exhibition_text">Exhibition</string>
     <string name="art_3">Art 3</string>
@@ -67,7 +68,7 @@
     <string name="text_myevent3">myEVENT</string>
     <string name="text_started">Lets Attend Your Favourite Event</string>
     <string name="text_getstarted">Get Started</string>
-    <string name="text_tema">Theme</string>
-    <string name="text_setting">SETTING</string>
-    <string name="text_bahasa">Language</string>
+    <string name="welcome">Welcoming Page</string>
+    <string name="transaksi">Transaksi</string>
+    <string name="list">List Event</string>
 </resources>

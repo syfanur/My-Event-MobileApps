@@ -40,7 +40,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/judul"
-                android:layout_margin="10px"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10px"
                 android:text="Bandung"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
@@ -50,7 +51,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/alamat"
-                android:layout_margin="10px"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="10px"
                 android:text="31 Agustus 2000"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
@@ -60,7 +62,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tanggal"
-                android:layout_margin="10px"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="10px"
                 android:text="Not Available"
                 android:textColor="@color/black"
                 android:textSize="16sp" />

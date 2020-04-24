@@ -62,7 +62,10 @@ public class Setting extends AppCompatActivity {
             mLanguage.setSelection(mAdapter.getPosition("English"));
         } else if (LocaleHelper.getLanguage(Setting.this).equalsIgnoreCase("in")) {
             mLanguage.setSelection(mAdapter.getPosition("Indonesian"));
-        } else {
+        } else if (LocaleHelper.getLanguage(Setting.this).equalsIgnoreCase("ar")) {
+            mLanguage.setSelection(mAdapter.getPosition("Arabic"));
+        }
+        else {
             mLanguage.setSelection(mAdapter.getPosition("Korean"));
         }
 
@@ -89,6 +92,13 @@ public class Setting extends AppCompatActivity {
                         break;
                     case 2:
                         context = LocaleHelper.setLocale(Setting.this, "ko");
+                        resources = context.getResources();
+                        mTextView.setText(resources.getString(R.string.text_setting));
+                        mTextView2.setText(resources.getString(R.string.text_bahasa));
+                        mTextView3.setText(resources.getString(R.string.text_tema));
+                        break;
+                    case 3:
+                        context = LocaleHelper.setLocale(Setting.this, "ar");
                         resources = context.getResources();
                         mTextView.setText(resources.getString(R.string.text_setting));
                         mTextView2.setText(resources.getString(R.string.text_bahasa));
