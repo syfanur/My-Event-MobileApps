@@ -1,12 +1,11 @@
 <resources>
-    <string name="app_name" translatable="false">My Event</string>
-    <string name="welcome" translatable="false">Welcoming Page</string>
-    <string name="transaksi">Transaksi</string>
-    <string name="list" translatable="false">List Event</string>
+
     <string-array name="bahasa_arrays">
         <item>Indonesia</item>
         <item>English</item>
+        <item>한국어</item>
     </string-array>
+
 
     <string-array name="mode_arrays">
         <item>Dark</item>
@@ -101,7 +100,10 @@ Epik High, Phum Viphurit, MYMP, Sheila On
 7, Raisa, Afgan, Glenn Fredly, dan masih
 banyak lagi.</item>
     </string-array>
-
+    <string name="app_name">My Event</string>
+    <string name="welcome">Welcoming Page</string>
+    <string name="transaksi">Transaksi</string>
+    <string name="list">List Event</string>
     <string name="myevent_text">myEVENT</string>
     <string name="exhibition_text">Exhibition</string>
     <string name="art_3">Art 3</string>
@@ -322,6 +324,9 @@ banyak lagi.</item>
         <item>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.".</item>
         <item>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</item>
     </string-array>
+    <string name="text_bahasa">Language</string>
+    <string name="text_tema">Theme</string>
+    <string name="text_setting">P</string>
 
 
 </resources>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">My Event</string>
-    <string name="transaksi">Transaction</string>
-    <string name="setting">Setting</string>
-
+    <string name="welcome">Welcoming Page</string>
+    <string name="transaksi">Transaksi</string>
+    <string name="list">List Event</string>
     <string name="myevent_text">myEVENT</string>
     <string name="exhibition_text">Exhibition</string>
     <string name="art_3">Art 3</string>
@@ -67,17 +67,7 @@
     <string name="text_myevent3">myEVENT</string>
     <string name="text_started">Lets Attend Your Favourite Event</string>
     <string name="text_getstarted">Get Started</string>
-
-    <string-array name="music_deskripsi">
-        <item>Archatala is a big festival
-which was held in Sukapura. there will be performances from various artists.</item>
-        <item>ICONIC is a big festival
-which was held in Bojongsoang. There will be appearances from various artists.</item>
-        <item>NAIF is a big festival
-which was held in Sukabirus. There will be appearances from various artists.</item>
-        <item>The love festival playlist is a big festival
-which was held in Bandung. There will be the appearance of Agnez Mo, Calum Scott,
-Epik High, Phum Viphurit, MYMP, Sheila On
-7, Raisa, Afgan, Glenn Fredly, and many more.</item>
-    </string-array>
+    <string name="text_tema">Tema</string>
+    <string name="text_setting">SETTING</string>
+    <string name="text_bahasa">Bahasa</string>
 </resources>
