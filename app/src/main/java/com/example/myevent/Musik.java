@@ -1,45 +1,57 @@
 package com.example.myevent;
 
-import com.google.firebase.database.Exclude;
-
-import java.util.HashMap;
-import java.util.Map;
-
-
 public class Musik {
 
-    public String title, info, tanggal, tiket, penyelenggara, bulan, tanggaal, jam, fee;
+    private String Judul, Alamat, Tanggal, Harga, Poster;
 
-    public int poster;
-
-    public Musik(){
-
+    public Musik(String judul, String alamat, String tanggal, String harga, String poster) {
+        Judul = judul;
+        Alamat = alamat;
+        Tanggal = tanggal;
+        Harga = harga;
+        Poster = poster;
     }
 
-    public Musik(String title, String info, String tanggal, String tiket, String penyelenggara,
-                 String bulan, String tanggaal, String jam, String harga, int poster) {
-        this.title = title;
-        this.info = info;
-        this.tanggal = tanggal;
-        this.tiket = tiket;
-        this.penyelenggara = penyelenggara;
-        this.bulan = bulan;
-        this.tanggaal = tanggaal;
-        this.jam = jam;
-        this.fee = harga;
-        this.poster = poster;
+    public Musik() {
     }
 
-    @Exclude
-    public Map<String, Object> toMap() {
-        HashMap<String, Object> result = new HashMap<>();
-        result.put("title", title);
-        result.put("info", info);
-        result.put("tanggal", tanggal);
-        result.put("tiket", tiket);
-        result.put("poster", poster);
-        return result;
+    public String getJudul() {
+        return Judul;
     }
 
+    public void setJudul(String judul) {
+        Judul = judul;
+    }
 
+    public String getAlamat() {
+        return Alamat;
+    }
+
+    public void setAlamat(String alamat) {
+        Alamat = alamat;
+    }
+
+    public String getTanggal() {
+        return Tanggal;
+    }
+
+    public void setTanggal(String tanggal) {
+        Tanggal = tanggal;
+    }
+
+    public String getHarga() {
+        return Harga;
+    }
+
+    public void setHarga(String harga) {
+        Harga = harga;
+    }
+
+    public String getPoster() {
+        return Poster;
+    }
+
+    public void setPoster(String poster) {
+        Poster = poster;
+    }
 }
