@@ -1,5 +1,6 @@
 package com.example.myevent;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -14,13 +15,23 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
 
 public class desc_event extends AppCompatActivity {
 
+    private ImageView mposter;
+    TextView mjudul, mtanggal, mharga, malamat, mjam, mpenyelenggara, mdeskripsi;
+    DatabaseReference ref;
+
 
     /*Deklarasi variable*/
-    Button btn_navigasi;
+    TextView btn_navigasi;
     String goolgeMap = "com.google.android.apps.maps"; // identitas package aplikasi google masps android
     Uri gmmIntentUri;
     Intent mapIntent;
@@ -32,33 +43,53 @@ public class desc_event extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_desc_event);
 
-        // Initialize the views.
-        TextView Judul = findViewById(R.id.text_pameran);
-        ImageView Poster = findViewById(R.id.view_bigevent);
-        TextView Penyelenggara = findViewById(R.id.text_author);
-        TextView Bulan = findViewById(R.id.text_bulan);
-        TextView Tanggal = findViewById(R.id.text_tanggal);
-        TextView Jam = findViewById(R.id.text_jam);
-        TextView Harga = findViewById(R.id.harga);
-        Button Alamat = findViewById(R.id.btn_navigasi);
+        mjudul = findViewById(R.id.text_pameran);
+        malamat = findViewById(R.id.btn_navigasi);
+        mtanggal = findViewById(R.id.text_bulan);
+        mharga = findViewById(R.id.harga);
+        mposter = findViewById(R.id.view_bigevent);
+        mjam = findViewById(R.id.text_jam);
+        mpenyelenggara = findViewById(R.id.text_author);
+        mdeskripsi = findViewById(R.id.text_deskripsi);
+        ref = FirebaseDatabase.getInstance().getReference().child("Musik");
 
-        // Set the text from the Intent extra.
-        Judul.setText(getIntent().getStringExtra("title"));
-        Penyelenggara.setText(getIntent().getStringExtra("penyelenggara"));
-        Tanggal.setText(getIntent().getStringExtra("tgl"));
-        Bulan.setText(getIntent().getStringExtra("bulan"));
-        Jam.setText(getIntent().getStringExtra("jam"));
-        Alamat.setText(getIntent().getStringExtra("tempat"));
-        Harga.setText(getIntent().getStringExtra("harga"));
-        // Load the image using the Glide library and the Intent extra.
-        Glide.with(this)
-                .load(getIntent()
-                        .getIntExtra("image_resource",0))
-                .into(Poster);
+        String MusikKey = getIntent().getStringExtra("MusikKey");
+
+        ref.child(MusikKey).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()) {
+                    String judul = dataSnapshot.child("Judul").getValue().toString();
+                    String alamat = dataSnapshot.child("Alamat").getValue().toString();
+                    String tanggal = dataSnapshot.child("Tanggal").getValue().toString();
+                    String harga = dataSnapshot.child("Harga").getValue().toString();
+                    String jam = dataSnapshot.child("Jam").getValue().toString();
+                    String penyelenggara = dataSnapshot.child("Penyelenggara").getValue().toString();
+                    String deskripsi = dataSnapshot.child("Deskripsi").getValue().toString();
+                    String poster = dataSnapshot.child("Poster").getValue().toString();
+
+
+                    Picasso.get().load(poster).into(mposter);
+                    mjudul.setText(judul);
+                    malamat.setText(alamat);
+                    mtanggal.setText(tanggal);
+                    mjam.setText(jam);
+                    mpenyelenggara.setText("By "+penyelenggara);
+                    mdeskripsi.setText(deskripsi);
+                    mharga.setText("Rp. "+harga);
+
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
 
 
         // menyamakan variable pada layout activity_main.xml
-        btn_navigasi    = (Button) findViewById(R.id.btn_navigasi);
+        btn_navigasi    = (TextView) findViewById(R.id.btn_navigasi);
 
         // tombol untuk menjalankan navigasi goolge maps intents
         btn_navigasi.setOnClickListener(new View.OnClickListener() {

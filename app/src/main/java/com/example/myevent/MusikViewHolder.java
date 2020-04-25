@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 public class MusikViewHolder  extends RecyclerView.ViewHolder {
     TextView mjudul, malamat, mtanggal, mharga;
     ImageView mposter;
+    View v;
 
     public MusikViewHolder(@NonNull View itemView) {
         super(itemView);
@@ -19,6 +20,7 @@ public class MusikViewHolder  extends RecyclerView.ViewHolder {
         mtanggal = itemView.findViewById(R.id.tanggal);
         mharga = itemView.findViewById(R.id.harga);
         mposter = itemView.findViewById(R.id.poster);
+        v = itemView;
 
     }
 }

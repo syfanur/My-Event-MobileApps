@@ -37,7 +37,7 @@ public class Detail_Seminar extends AppCompatActivity {
         ImageView Poster = findViewById(R.id.view_bigevent);
         TextView Penyelenggara = findViewById(R.id.text_author);
         TextView Bulan = findViewById(R.id.text_bulan);
-        TextView Tanggal = findViewById(R.id.text_tanggal);
+        TextView Tanggal = findViewById(R.id.text_bulan);
         TextView Jam = findViewById(R.id.text_jam);
         TextView Harga = findViewById(R.id.harga);
         Button Alamat = findViewById(R.id.btn_navigasi);

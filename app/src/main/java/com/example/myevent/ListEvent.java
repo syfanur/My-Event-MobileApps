@@ -1,6 +1,7 @@
 package com.example.myevent;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import android.view.LayoutInflater;
@@ -45,14 +46,26 @@ public class ListEvent extends AppCompatActivity {
         options = new FirebaseRecyclerOptions.Builder<Musik>().setQuery(DataRef, Musik.class).build();
         adapter = new FirebaseRecyclerAdapter<Musik, MusikViewHolder>(options) {
             @Override
-            protected void onBindViewHolder(@NonNull MusikViewHolder holder, int position, @NonNull Musik model) {
+            protected void onBindViewHolder(@NonNull MusikViewHolder holder, final int position, @NonNull Musik model) {
                 holder.mjudul.setText(model.getJudul());
                 holder.malamat.setText(model.getAlamat());
                 holder.mtanggal.setText(model.getTanggal());
-                holder.mharga.setText(model.getHarga());
+                holder.mharga.setText("Rp. " + model.getHarga());
                 Picasso.get().load(model.getPoster()).into(holder.mposter);
 
+                holder.v.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent e = new Intent(ListEvent.this,desc_event.class);
+                        e.putExtra("MusikKey", getRef(position).getKey());
+                        startActivity(e);
+                    }
+                });
+
+
             }
+
+
 
             @NonNull
             @Override
