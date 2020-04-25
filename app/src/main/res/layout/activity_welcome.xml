@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Welcome">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_large"
+        >
+
+        <TextView
+            android:id="@+id/judul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxLines="2"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/text_size_expanded_title_medium"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/layout_margin_extra_large"
+            android:text="My EVENT" />
+
+        <ImageView
+            android:id="@+id/eventImage"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_marginBottom="@dimen/layout_margin_medium"
+            android:padding="@dimen/padding_extra_large"
+            android:scaleType="centerCrop"
+            android:src="@drawable/welcom" />
+
+        <TextView
+            android:id="@+id/desc1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxLines="2"
+            android:textSize="@dimen/text_size_expanded_title_medium"
+            android:textStyle="bold"
+            android:text="Let's attend your" />
+
+        <TextView
+            android:id="@+id/desc2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxLines="2"
+            android:textSize="@dimen/text_size_expanded_title_medium"
+            android:textStyle="bold"
+            android:text="favorite event." />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/layout_margin_medium"
+            android:gravity="center"
+            android:text="" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/orange"
+            android:text="Get Started"
+            android:textSize="@dimen/layout_margin_large"
+            android:textColor="@color/white"
+            android:onClick="next"
+           />
+
+
+
+
+    </LinearLayout>
+
+
+
+</ScrollView>

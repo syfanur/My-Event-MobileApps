@@ -8,14 +8,26 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".Detailbayar"></activity>
-        <activity android:name=".VerifikasiPembayaran" />
+        android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".riwayatPembayaran"></activity>
+        <activity android:name=".uploadBukti" />
+        <activity android:name=".detailPembayaran" />
+        <activity android:name=".Feedback" />
+        <activity android:name=".Detail_Seminar" />
+        <activity android:name=".ListEvent" />
+        <activity android:name=".ListSeminar" />
+        <activity android:name=".ListWorkshop" />
+        <activity android:name=".Login" />
+        <activity android:name=".Setting" />
         <activity android:name=".metodePembayaran" />
         <activity android:name=".Register" />
-        <activity
-            android:name=".ui.login.LoginActivity"
-            android:label="@string/title_activity_login" />
+        <activity android:name=".Profil" />
+        <activity android:name=".Homepage" />
+        <activity android:name=".Education" />
+        <activity android:name=".ListExhibition" />
+        <activity android:name=".desc_event" />
+        <activity android:name=".transaksi1" />
+        <activity android:name=".Welcome" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
