@@ -125,7 +125,12 @@ public class Setting extends AppCompatActivity {
 
 
     public void profil(View view) {
-        Intent a = new Intent(getApplicationContext(),Profil.class);
+        Intent a = new Intent(getApplicationContext(),Editprofile.class);
         startActivity(a);
+    }
+
+    public void kembali(View view) {
+        Intent uwu = new Intent(getApplicationContext(),HomeActivity.class);
+        startActivity(uwu);
     }
 }
