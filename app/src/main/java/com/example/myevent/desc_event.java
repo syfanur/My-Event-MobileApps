@@ -27,6 +27,7 @@ public class desc_event extends AppCompatActivity {
 
     private ImageView mposter;
     TextView mjudul, mtanggal, mharga, malamat, mjam, mpenyelenggara, mdeskripsi;
+
     DatabaseReference ref;
 
 
@@ -119,6 +120,7 @@ public class desc_event extends AppCompatActivity {
 
     public void attend(View view) {
         Intent a = new Intent(getApplicationContext(),transaksi1.class);
+        a.putExtra("MusikKey", ref.getRef().getKey());
         startActivity(a);
     }
 

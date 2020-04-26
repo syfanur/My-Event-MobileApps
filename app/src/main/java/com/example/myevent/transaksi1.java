@@ -1,5 +1,6 @@
 package com.example.myevent;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,11 +16,20 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
+
 import java.text.NumberFormat;
 
 public class transaksi1 extends AppCompatActivity {
 
     private Button btAlert;
+    TextView mjudul, mharga;
+    DatabaseReference ref;
 
 
     int quantity=0;
@@ -29,9 +39,13 @@ public class transaksi1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transaksi1);
 
+
         // Initialize the views.
         TextView Judul = findViewById(R.id.ticket);
         TextView Harga = findViewById(R.id.biaya);
+
+        String b = getIntent().getStringExtra("MusikKey");
+
 
         // Set the text from the Intent extra.
         Judul.setText("Archatala");
@@ -114,10 +128,13 @@ public class transaksi1 extends AppCompatActivity {
     }
 
     private int calculateprice(){//jumlah pesanan * harga
-        int harga=200000;
+        int harga=100000;;
 
         return quantity * harga;
     }
+
+
+
     private String createOrderSummary(int price, String name) {//hasil pemesanan
         String pricemessage=" ------------------------------------------------------------------ " +
                 "\n Nama = "+name;

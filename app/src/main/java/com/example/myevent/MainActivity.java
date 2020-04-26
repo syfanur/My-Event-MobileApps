@@ -45,5 +45,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
+    public void gratis(View view) {
+        Intent e = new Intent(getApplicationContext(),HomeActivity.class);
+        startActivity(e);
+    }
 }

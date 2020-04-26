@@ -35,34 +35,47 @@
         android:textStyle="normal" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/login_phone_input"
         android:layout_width="336dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="50dp"
         android:ems="10"
-        android:inputType="textEmailAddress"
-        android:text="Email Address" />
+        android:inputType="number"
+        android:hint="Phone Number" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/login_password_input"
         android:layout_width="334dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:ems="10"
-        android:inputType="text"
+        android:inputType="textPassword"
         android:layout_marginTop="10dp"
-        android:text="Password"/>
+        android:hint="Password"/>
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/remember_me_chkb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remember me"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:gravity="center_vertical"
+        android:textSize="18sp"
+        android:layout_marginLeft="17dp"
+></androidx.appcompat.widget.AppCompatCheckBox>
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/forget_password_link"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Forgot Password?" />
+        android:text="Forgot Password?"
+        android:layout_marginTop="10dp"/>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/login_btn"
         android:layout_width="339dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -71,25 +84,20 @@
         android:onClick="home"
         android:textColor="@android:color/white"
         android:textColorHint="#EEFF41"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="40dp"
         />
 
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/regis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="Don't have an account? Register now"
+        android:onClick="regis"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textSize="14sp"
         android:layout_marginTop="30dp"/>
 
-    <EditText
-        android:id="@+id/editText4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPassword" />
 
 </LinearLayout>

@@ -1,96 +1,80 @@
 package com.example.myevent;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
-import android.content.res.TypedArray;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.ListView;
-import android.widget.SimpleAdapter;
-import java.util.ArrayList;
-import java.util.HashMap;
+import android.view.ViewGroup;
+import android.widget.EditText;
+
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.squareup.picasso.Picasso;
 
 public class ListSeminar extends AppCompatActivity {
-    private RecyclerView mRecyclerView;
-    private ArrayList<seminar> mSemData;
-    private seminarAdapter mAdapter;
+
+    EditText inputSearch;
+    RecyclerView recyclerView;
+    FirebaseRecyclerOptions<Musik> options;
+    FirebaseRecyclerAdapter<Musik,MusikViewHolder>adapter;
+    DatabaseReference DataRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_seminar);
 
-        // Initialize the RecyclerView.
-        mRecyclerView = findViewById(R.id.recycler_view);
 
-        // Get the appropriate column count.
-        int gridColumnCount = getResources().getInteger(R.integer.grid_column_count);
+        DataRef = FirebaseDatabase.getInstance().getReference().child("Seminar");
+        inputSearch = findViewById(R.id.inputSearch);
+        recyclerView = findViewById(R.id.recycler_view);
+        recyclerView.setLayoutManager((new LinearLayoutManager(getApplicationContext())));
+        recyclerView.setHasFixedSize(true);
 
-        // Set the Layout Manager.
-        mRecyclerView.setLayoutManager(new GridLayoutManager(
-                this, gridColumnCount));
-
-        // Initialize the ArrayList that will contain the data.
-        mSemData = new ArrayList<>();
-
-        // Initialize the adapter and set it to the RecyclerView.
-        mAdapter = new seminarAdapter(this, mSemData);
-        mRecyclerView.setAdapter(mAdapter);
-
-        // Get the data.
-        initializeData();
-
-//
-
-
+        LoadData();
     }
 
-    private void initializeData() {
-        // Get the resources from the XML file.
-        String[] judul = getResources()
-                .getStringArray(R.array.sem_judul);
-        String[] tempat = getResources()
-                .getStringArray(R.array.sem_tempat);
-        String[] tanggal = getResources()
-                .getStringArray(R.array.sem_tanggal);
-        String[] tiket = getResources()
-                .getStringArray(R.array.sem_tiket);
-        String[] penyelenggara = getResources()
-                .getStringArray(R.array.sem_penyelenggara);
-        String[] jam = getResources()
-                .getStringArray(R.array.sem_jam);
-        String[] bulan = getResources()
-                .getStringArray(R.array.sem_bulan);
-        String[] harga = getResources()
-                .getStringArray(R.array.sem_harga);
-        String[] tgl = getResources()
-                .getStringArray(R.array.sem_tgl);
-        TypedArray poster =
-                getResources().obtainTypedArray(R.array.sem_poster);
+    private void LoadData() {
+        options = new FirebaseRecyclerOptions.Builder<Musik>().setQuery(DataRef, Musik.class).build();
+        adapter = new FirebaseRecyclerAdapter<Musik, MusikViewHolder>(options) {
+            @Override
+            protected void onBindViewHolder(@NonNull MusikViewHolder holder, final int position, @NonNull Musik model) {
+                holder.mjudul.setText(model.getJudul());
+                holder.malamat.setText(model.getAlamat());
+                holder.mtanggal.setText(model.getTanggal());
+                holder.mharga.setText("Rp. "+model.getHarga());
+                Picasso.get().load(model.getPoster()).into(holder.mposter);
 
-        // Clear the existing data (to avoid duplication).
-        mSemData.clear();
+                holder.v.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent e = new Intent(ListSeminar.this,desc_event.class);
+                        e.putExtra("SeminarKey", getRef(position).getKey());
+                        startActivity(e);
+                    }
+                });
 
-        // Create the ArrayList of Sports objects with the titles and
-        // information about each sport.
-        for (int i = 0; i < judul.length; i++) {
-            mSemData.add(new seminar(judul[i], tempat[i],tanggal[i],tiket[i], penyelenggara[i],
-                    bulan[i], tgl[i], jam[i], harga[i],
-                    poster.getResourceId(i, 0)));
-        }
 
-        // Recycle the typed array.
-        poster.recycle();
+            }
 
-        // Notify the adapter of the change.
-        mAdapter.notifyDataSetChanged();
+
+
+            @NonNull
+            @Override
+            public MusikViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+                View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list,parent,false);
+                return new MusikViewHolder(v);
+            }};
+
+
+        adapter.startListening();
+        recyclerView.setAdapter(adapter);
     }
-
-
-
 }
-
-

@@ -14,6 +14,7 @@
     <dimen name="text_size_small_extra">8sp</dimen>
     <dimen name="text_size_very_large">42sp</dimen>
 
+
     <!-- margin specifics -->
     <dimen name="layout_margin_extra_small">2dp</dimen>
     <dimen name="layout_margin_small">6dp</dimen>
@@ -91,6 +92,12 @@
 
     <dimen name="ticket_width">326dp</dimen>
 
-<!--    button -->
-        <dimen name="button_size">30dp</dimen>
+    <!--    button -->
+    <dimen name="button_size">30dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 </resources>
