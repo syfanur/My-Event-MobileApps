@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".DetailEventTwo">
+
+    <View
+        android:id="@+id/view_popup2"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:background="#D3D1D1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/bt_yes_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="ButtonYesCancel"
+        app:layout_constraintBottom_toBottomOf="@+id/view_popup2"
+        app:layout_constraintEnd_toEndOf="@+id/view_popup2"
+        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintStart_toStartOf="@+id/view_popup2"
+        app:layout_constraintTop_toTopOf="@+id/view_popup2"
+        app:layout_constraintVertical_bias="0.903"
+        app:srcCompat="@drawable/ic_yesno" />
+
+    <ImageButton
+        android:id="@+id/bt_no_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="ButtonNoCancel"
+        app:layout_constraintBottom_toBottomOf="@+id/view_popup2"
+        app:layout_constraintEnd_toEndOf="@+id/view_popup2"
+        app:layout_constraintHorizontal_bias="0.921"
+        app:layout_constraintStart_toStartOf="@+id/view_popup2"
+        app:layout_constraintTop_toTopOf="@+id/view_popup2"
+        app:layout_constraintVertical_bias="0.903"
+        app:srcCompat="@drawable/ic_yesno" />
+
+    <TextView
+        android:id="@+id/text_yes_cancel"
+        android:layout_width="43dp"
+        android:layout_height="22dp"
+        android:text="@string/yes_text"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/bt_yes_cancel"
+        app:layout_constraintEnd_toEndOf="@+id/bt_yes_cancel"
+        app:layout_constraintStart_toStartOf="@+id/bt_yes_cancel"
+        app:layout_constraintTop_toTopOf="@+id/bt_yes_cancel" />
+
+    <TextView
+        android:id="@+id/text_no_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_text"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/bt_no_cancel"
+        app:layout_constraintEnd_toEndOf="@+id/bt_no_cancel"
+        app:layout_constraintStart_toStartOf="@+id/bt_no_cancel"
+        app:layout_constraintTop_toTopOf="@+id/bt_no_cancel" />
+
+    <TextView
+        android:id="@+id/cancel_popup"
+        android:layout_width="276dp"
+        android:layout_height="81dp"
+        android:text="@string/cancel_text"
+        android:textAlignment="center"
+        android:textColor="#1A1A1A"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/view_popup2"
+        app:layout_constraintEnd_toEndOf="@+id/view_popup2"
+        app:layout_constraintHorizontal_bias="0.458"
+        app:layout_constraintStart_toStartOf="@+id/view_popup2"
+        app:layout_constraintTop_toTopOf="@+id/view_popup2"
+        app:layout_constraintVertical_bias="0.575" />
+
+    <ImageView
+        android:id="@+id/image_event3b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_event3"
+        app:layout_constraintBottom_toBottomOf="@+id/view_popup2"
+        app:layout_constraintEnd_toEndOf="@+id/view_popup2"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/view_popup2"
+        app:layout_constraintTop_toTopOf="@+id/view_popup2"
+        app:layout_constraintVertical_bias="0.047" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
