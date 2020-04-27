@@ -22,15 +22,14 @@ public class ListSeminar extends AppCompatActivity {
 
     EditText inputSearch;
     RecyclerView recyclerView;
-    FirebaseRecyclerOptions<Musik> options;
-    FirebaseRecyclerAdapter<Musik,MusikViewHolder>adapter;
+    FirebaseRecyclerOptions<seminar> options;
+    FirebaseRecyclerAdapter<seminar,SeminarViewHolder>adapter;
     DatabaseReference DataRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_seminar);
-
 
         DataRef = FirebaseDatabase.getInstance().getReference().child("Seminar");
         inputSearch = findViewById(R.id.inputSearch);
@@ -42,22 +41,23 @@ public class ListSeminar extends AppCompatActivity {
     }
 
     private void LoadData() {
-        options = new FirebaseRecyclerOptions.Builder<Musik>().setQuery(DataRef, Musik.class).build();
-        adapter = new FirebaseRecyclerAdapter<Musik, MusikViewHolder>(options) {
+        options = new FirebaseRecyclerOptions.Builder<seminar>().setQuery(DataRef, seminar.class).build();
+        adapter = new FirebaseRecyclerAdapter<seminar, SeminarViewHolder>(options) {
             @Override
-            protected void onBindViewHolder(@NonNull MusikViewHolder holder, final int position, @NonNull Musik model) {
+            protected void onBindViewHolder(@NonNull SeminarViewHolder holder, final int position, @NonNull final seminar model) {
                 holder.mjudul.setText(model.getJudul());
                 holder.malamat.setText(model.getAlamat());
                 holder.mtanggal.setText(model.getTanggal());
-                holder.mharga.setText("Rp. "+model.getHarga());
+                holder.mharga.setText("Rp. " + model.getHarga());
                 Picasso.get().load(model.getPoster()).into(holder.mposter);
 
                 holder.v.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent e = new Intent(ListSeminar.this,desc_event.class);
-                        e.putExtra("SeminarKey", getRef(position).getKey());
-                        startActivity(e);
+                        Intent h = new Intent(ListSeminar.this,Detail_Seminar.class);
+                        h.putExtra("pid",
+                                model.getId());
+                        startActivity(h);
                     }
                 });
 
@@ -68,13 +68,15 @@ public class ListSeminar extends AppCompatActivity {
 
             @NonNull
             @Override
-            public MusikViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+            public SeminarViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
                 View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list,parent,false);
-                return new MusikViewHolder(v);
+                return new SeminarViewHolder(v);
             }};
 
 
         adapter.startListening();
         recyclerView.setAdapter(adapter);
     }
+
+
 }

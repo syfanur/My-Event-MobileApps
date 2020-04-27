@@ -87,6 +87,14 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         TextView addressTextView = headerView.findViewById(R.id.user_address);
         CircleImageView profileImageView = headerView.findViewById(R.id.user_profile_image);
 
+        profileImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent profil = new Intent(HomeActivity.this, Profil.class);
+                startActivity(profil);
+            }
+        });
+
         userNameTextView.setText(Prevalent.currentOnlineUser.getName());
         addressTextView.setText(Prevalent.currentOnlineUser.getAddress());
         Picasso.get().load(Prevalent.currentOnlineUser.getImage()).placeholder(R.drawable.b).into(profileImageView);
@@ -200,7 +208,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         if (id == R.id.nav_cart)
         {
-
+            Intent apa = new Intent(HomeActivity.this, CartActivity.class);
+            startActivity(apa);
         }
         else if (id == R.id.nav_editprofil) {
             Intent zz = new Intent(HomeActivity.this, Editprofile.class);
@@ -227,4 +236,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
 }

@@ -46,7 +46,7 @@ public class ListEvent extends AppCompatActivity {
         options = new FirebaseRecyclerOptions.Builder<Musik>().setQuery(DataRef, Musik.class).build();
         adapter = new FirebaseRecyclerAdapter<Musik, MusikViewHolder>(options) {
             @Override
-            protected void onBindViewHolder(@NonNull MusikViewHolder holder, final int position, @NonNull Musik model) {
+            protected void onBindViewHolder(@NonNull MusikViewHolder holder, final int position, @NonNull final Musik model) {
                 holder.mjudul.setText(model.getJudul());
                 holder.malamat.setText(model.getAlamat());
                 holder.mtanggal.setText(model.getTanggal());
@@ -57,7 +57,7 @@ public class ListEvent extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         Intent e = new Intent(ListEvent.this,desc_event.class);
-                        e.putExtra("MusikKey", getRef(position).getKey());
+                        e.putExtra("pid", model.getId());
                         startActivity(e);
                     }
                 });

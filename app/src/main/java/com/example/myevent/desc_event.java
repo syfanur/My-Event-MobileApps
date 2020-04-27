@@ -15,6 +15,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -22,13 +26,19 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.HashMap;
+
 
 public class desc_event extends AppCompatActivity {
 
     private ImageView mposter;
     TextView mjudul, mtanggal, mharga, malamat, mjam, mpenyelenggara, mdeskripsi;
-
-    DatabaseReference ref;
+    private ElegantNumberButton numberButton;
+    DatabaseReference ref, DataRef;
+    private String id = "";
+    private Button addcart;
 
 
     /*Deklarasi variable*/
@@ -39,10 +49,14 @@ public class desc_event extends AppCompatActivity {
     String bandung = "-6.973700, 107.629233"; // koordinat
 
 
+
+
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_desc_event);
+
+        id = getIntent().getStringExtra("pid");
 
         mjudul = findViewById(R.id.text_pameran);
         malamat = findViewById(R.id.btn_navigasi);
@@ -52,45 +66,22 @@ public class desc_event extends AppCompatActivity {
         mjam = findViewById(R.id.text_jam);
         mpenyelenggara = findViewById(R.id.text_author);
         mdeskripsi = findViewById(R.id.text_deskripsi);
-        ref = FirebaseDatabase.getInstance().getReference().child("Musik");
+        addcart = findViewById(R.id.addcart);
+        numberButton = findViewById(R.id.number_btn);
 
-        String MusikKey = getIntent().getStringExtra("MusikKey");
-
-        ref.child(MusikKey).addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if (dataSnapshot.exists()) {
-                    String judul = dataSnapshot.child("Judul").getValue().toString();
-                    String alamat = dataSnapshot.child("Alamat").getValue().toString();
-                    String tanggal = dataSnapshot.child("Tanggal").getValue().toString();
-                    String harga = dataSnapshot.child("Harga").getValue().toString();
-                    String jam = dataSnapshot.child("Jam").getValue().toString();
-                    String penyelenggara = dataSnapshot.child("Penyelenggara").getValue().toString();
-                    String deskripsi = dataSnapshot.child("Deskripsi").getValue().toString();
-                    String poster = dataSnapshot.child("Poster").getValue().toString();
+        getProductDetails(id);
 
 
-                    Picasso.get().load(poster).into(mposter);
-                    mjudul.setText(judul);
-                    malamat.setText(alamat);
-                    mtanggal.setText(tanggal);
-                    mjam.setText(jam);
-                    mpenyelenggara.setText("By "+penyelenggara);
-                    mdeskripsi.setText(deskripsi);
-                    mharga.setText("Rp. "+harga);
-
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
+        addcart.setOnClickListener(new View.OnClickListener(){
+                                       @Override
+                                       public void onClick(View v) {
+                                           addingToCartList();
+                                       }
         });
 
 
         // menyamakan variable pada layout activity_main.xml
-        btn_navigasi    = (TextView) findViewById(R.id.btn_navigasi);
+        btn_navigasi = (TextView) findViewById(R.id.btn_navigasi);
 
         // tombol untuk menjalankan navigasi goolge maps intents
         btn_navigasi.setOnClickListener(new View.OnClickListener() {
@@ -118,12 +109,68 @@ public class desc_event extends AppCompatActivity {
 
     }
 
-    public void attend(View view) {
-        Intent a = new Intent(getApplicationContext(),transaksi1.class);
-        a.putExtra("MusikKey", ref.getRef().getKey());
-        startActivity(a);
+    private void getProductDetails(String id) {
+        DatabaseReference productsRef = FirebaseDatabase.getInstance().getReference().child("Musik");
+
+        productsRef.child(id).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()) {
+                    Musik musik = dataSnapshot.getValue(Musik.class);
+
+                    Picasso.get().load(musik.getPoster()).into(mposter);
+                    mjudul.setText(musik.getJudul());
+                    malamat.setText(musik.getAlamat());
+                    mtanggal.setText(musik.getTanggal());
+                    mjam.setText(musik.getJam());
+                    mpenyelenggara.setText("By " + musik.getPenyelenggara());
+                    mdeskripsi.setText(musik.getDeskripsi());
+                    mharga.setText(musik.getHarga());
+
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+
     }
 
 
+    private void addingToCartList() {
+         String saveCurrentTime, saveCurrentDate;
+        Calendar calForDate = Calendar.getInstance();
+        SimpleDateFormat currentDate = new SimpleDateFormat("MMM dd, yyyy");
+        saveCurrentDate = currentDate.format(calForDate.getTime());
+        SimpleDateFormat currentTime = new SimpleDateFormat("MMM dd, yyyy");
+        saveCurrentTime = currentDate.format(calForDate.getTime());
 
+        final DatabaseReference cartListRef = FirebaseDatabase.getInstance().getReference().child("CartList");
+        final HashMap<String, Object> cartMap = new HashMap<>();
+        cartMap.put("pid", id);
+        cartMap.put("pname", mjudul.getText().toString());
+        cartMap.put("price", mharga.getText().toString());
+        cartMap.put("date", saveCurrentDate);
+        cartMap.put("time", saveCurrentTime);
+        cartMap.put("quantity", numberButton.getNumber());
+
+        cartListRef.child("User View").child(Prevalent.currentOnlineUser.getPhone()).child("Products").child(id)
+                .updateChildren(cartMap)
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if(task.isSuccessful()){
+                            Toast.makeText(desc_event.this, "add to cart", Toast.LENGTH_SHORT).show();
+                                                Intent intent = new Intent (desc_event.this, HomeActivity.class);
+                                                startActivity(intent);
+
+                        }
+                    }
+                });
+
+
+    }
 }

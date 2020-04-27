@@ -2,17 +2,21 @@ package com.example.myevent;
 
 public class Musik {
 
-    private String Judul, Alamat, Tanggal, Harga, Poster;
+    private String Judul, Alamat, Tanggal, Harga, Poster, Id, Jam, Penyelenggara, Deskripsi;
 
-    public Musik(String judul, String alamat, String tanggal, String harga, String poster) {
+    public Musik() {
+    }
+
+    public Musik(String judul, String alamat, String tanggal, String harga, String poster, String id, String jam, String penyelenggara, String deskripsi) {
         Judul = judul;
         Alamat = alamat;
         Tanggal = tanggal;
         Harga = harga;
         Poster = poster;
-    }
-
-    public Musik() {
+        Id = id;
+        Jam = jam;
+        Penyelenggara = penyelenggara;
+        Deskripsi = deskripsi;
     }
 
     public String getJudul() {
@@ -53,5 +57,37 @@ public class Musik {
 
     public void setPoster(String poster) {
         Poster = poster;
+    }
+
+    public String getId() {
+        return Id;
+    }
+
+    public void setId(String id) {
+        Id = id;
+    }
+
+    public String getJam() {
+        return Jam;
+    }
+
+    public void setJam(String jam) {
+        Jam = jam;
+    }
+
+    public String getPenyelenggara() {
+        return Penyelenggara;
+    }
+
+    public void setPenyelenggara(String penyelenggara) {
+        Penyelenggara = penyelenggara;
+    }
+
+    public String getDeskripsi() {
+        return Deskripsi;
+    }
+
+    public void setDeskripsi(String deskripsi) {
+        Deskripsi = deskripsi;
     }
 }
