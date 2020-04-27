@@ -38,25 +38,14 @@
 
     <Button
         android:id="@+id/btMandiri"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_width="294dp"
+        android:layout_height="79dp"
         android:layout_marginTop="40dp"
-        android:text="Virtual Account Mandiri"
+        android:text="Bank Account MyEvent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.164"
         app:layout_constraintStart_toStartOf="@+id/imageView5"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
-    <Button
-        android:id="@+id/btBni"
-        android:layout_width="300dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="28dp"
-        android:text="Virtual Account BNI"
-        app:layout_constraintEnd_toEndOf="@+id/imageView5"
-        app:layout_constraintHorizontal_bias="0.639"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btMandiri" />
 
     <TextView
         android:id="@+id/textView3"

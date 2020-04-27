@@ -1,5 +1,7 @@
 package com.example.myevent;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
@@ -10,16 +12,12 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
-//import android.widget.Button;
-
-public class uploadBukti extends AppCompatActivity {
+public class upload_bukti_bni extends AppCompatActivity {
     private Button btnUpload;
     private static final int SELECT_PHOTO = 100;
     Uri selectedImage;
@@ -29,10 +27,12 @@ public class uploadBukti extends AppCompatActivity {
     UploadTask uploadTask;
     TextView textView;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_upload_bukti);
+        setContentView(R.layout.activity_upload_bukti_bni);
+
         storage = FirebaseStorage.getInstance();
         storageRef = storage.getReference();
         textView = (TextView) findViewById(R.id.textViewTimer);
@@ -40,8 +40,8 @@ public class uploadBukti extends AppCompatActivity {
         Timer();
     }
 
-    public void bt_upload(View view) {
-        imageRef = storageRef.child("images/" + selectedImage.getLastPathSegment());
+    public void bni(View view) {
+        imageRef = storageRef.child("imagesBNI/" + selectedImage.getLastPathSegment());
 
         //creating and showing progress dialog
         progressDialog = new ProgressDialog(this);
@@ -68,11 +68,11 @@ public class uploadBukti extends AppCompatActivity {
 
         });
     }
-    public void Timer(){
+    public void Timer() {
         new CountDownTimer(59000, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
-                textView.setText("" +millisUntilFinished / 1000 + "Batas Pembayaran Selesai");
+                textView.setText("" + millisUntilFinished / 1000 + "Batas Pembayaran Selesai");
             }
 
             @Override
@@ -81,76 +81,7 @@ public class uploadBukti extends AppCompatActivity {
 
             }
         }.start();
-    //btnUpload = (Button) findViewById(R.id.bt_upload);
-        //btnUpload.setOnClickListener(new View.OnClickListener() {
-        //@Override
-        //public void onClick(View v) {
-            //showDialog();
-        //}
-    //});
-    //}
-        //private void showDialog () {
-            //AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
-                    //this);
-
-            //set title
-            //alertDialogBuilder.setTitle("Berhasil Menggunggah Gambar");
-
-
-            //setpesan
-            //alertDialogBuilder.setNeutralButton("Ok", new DialogInterface.OnClickListener() {
-                //@Override
-                //public void onClick(DialogInterface dialog, int i) {
-                    //Intent e = new Intent(getApplicationContext(), riwayatPembayaran.class);
-                    //startActivity(e);
-
-                //}
-
-            //});
-            //membuat alert
-            //AlertDialog alertDialog = alertDialogBuilder.create();
-
-            //menampilkan dialog
-            //alertDialog.show();
-
-        }
-
-        //Intent e = new Intent(getApplicationContext(),riwayatPembayaran.class);
-        //startActivity(e);
-
-
-
-
-    //INI BUAT ALERT
-//private void showDialog() {
-    //AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
-            //this);
-
-    //set title
-    //alertDialogBuilder.setTitle("Berhasil Menggunggah Gambar");
-
-
-    //setpesan
-    //alertDialogBuilder.setNeutralButton("Ok", new DialogInterface.OnClickListener() {
-        //@Override
-        //public void onClick(DialogInterface dialog, int i) {
-            //Intent e = new Intent(getApplicationContext(), riwayatPembayaran.class);
-            //startActivity(e);
-
-        //}
-
-    //});
-    //membuat alert
-    //AlertDialog alertDialog = alertDialogBuilder.create();
-
-    //menampilkan dialog
-    //alertDialog.show();
-
-//}
-
-
-
-
+    }
     public void bt_select(View view) {
         Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
 
@@ -164,11 +95,9 @@ public class uploadBukti extends AppCompatActivity {
         switch (requestCode) {
             case SELECT_PHOTO:
                 if (resultcode == RESULT_OK) {
-                    Toast.makeText(uploadBukti.this, "Image Selected",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(upload_bukti_bni.this, "Image Selected", Toast.LENGTH_SHORT).show();
                     selectedImage = imageReturnedIntent.getData();
                 }
-                }
+        }
+    }}
 
-    }
-
-    }

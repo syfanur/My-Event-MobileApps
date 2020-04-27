@@ -48,4 +48,9 @@ public class Setting extends AppCompatActivity {
         Intent a = new Intent(getApplicationContext(),Profil.class);
         startActivity(a);
     }
+
+    public void fb(View view) {
+        Intent feedback = new Intent(getApplicationContext(),Feedback.class);
+        startActivity(feedback);
+    }
 }

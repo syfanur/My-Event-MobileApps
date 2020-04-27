@@ -97,13 +97,14 @@
             android:padding="4dp"
             >
             <ImageButton
-                android:id="@+id/imageButton"
+                android:id="@+id/imageButtonF"
                 android:layout_marginLeft="30dp"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:src="@drawable/feedback1"
                 android:scaleType="fitXY"
                 android:adjustViewBounds="true"
+                android:onClick="fb"
                 />
 
             <ImageButton

@@ -41,7 +41,7 @@ public class metodePembayaran extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 //jika tombol diklik akan berpindah ke activity selanjutnya
-                Intent e = new Intent(getApplicationContext(),detailPembayaran.class);
+                Intent e = new Intent(getApplicationContext(),DetailPembayaran.class);
                 startActivity(e);
             }
         })

@@ -9,9 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".riwayatPembayaran"></activity>
+        <activity android:name=".DetailPembayaranBNI"></activity>
+        <activity android:name=".upload_bukti_bni"></activity>
+        <activity android:name=".riwayatPembayaran" />
         <activity android:name=".uploadBukti" />
-        <activity android:name=".detailPembayaran" />
+        <activity android:name=".DetailPembayaran" />
         <activity android:name=".Feedback" />
         <activity android:name=".Detail_Seminar" />
         <activity android:name=".ListEvent" />

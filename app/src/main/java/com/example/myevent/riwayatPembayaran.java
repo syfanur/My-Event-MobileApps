@@ -1,8 +1,8 @@
 package com.example.myevent;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class riwayatPembayaran extends AppCompatActivity {
 
@@ -10,5 +10,7 @@ public class riwayatPembayaran extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_riwayat_pembayaran);
+
+
     }
 }
