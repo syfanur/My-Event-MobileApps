@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_marginBottom="10dp"
+        android:background="#DCECE9">
+
+        <ImageView
+            android:id="@+id/poster"
+            android:layout_width="90dp"
+            android:layout_height="125dp"
+            android:layout_marginLeft="5dp"
+            android:onClick="event"
+            android:scaleType="fitXY"
+            android:src="@drawable/playlistlove" />
+
+        <RelativeLayout
+            android:id="@+id/movieDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/poster">
+
+            <TextView
+                android:id="@+id/judul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Playlist Love Festival"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/alamat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/judul"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="10px"
+                android:text="Bandung"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tanggal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/alamat"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="10px"
+                android:text="31 Agustus 2000"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/harga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tanggal"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="10px"
+                android:text="Rp. 100.000"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

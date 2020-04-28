@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFFFFF"
+    >
+
+    <ImageView
+        android:id="@+id/view_bigevent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:layout_marginBottom="380dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/view_tanggal"
+        android:layout_width="335dp"
+        android:layout_height="175dp"
+        android:background="@drawable/ic_tanggal"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.392" />
+
+
+    <TextView
+        android:id="@+id/text_pameran"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Playlist Love Festival 2020"
+        android:textColor="#393939"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.136"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.343" />
+
+    <TextView
+        android:id="@+id/text_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="by DJOJOKARSONO"
+        android:textColor="#393939"
+        android:textSize="15sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.136"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_pameran"
+        app:layout_constraintVertical_bias="0.018" />
+
+    <TextView
+        android:id="@+id/text_bulan"
+        android:layout_width="71dp"
+        android:layout_height="69dp"
+        android:background="@drawable/ic_tanggal"
+        android:gravity="center"
+        android:text="31 Januari 2020"
+        android:textColor="#F6D40D"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.465" />
+
+    <TextView
+        android:id="@+id/btn_navigasi"
+        android:layout_width="227dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="8dp"
+        android:background="#FFFFFF"
+        android:text="TNI AU Husein Sastranagara"
+        android:textColor="#FF9B00"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/view_tanggal"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/text_bulan"
+        app:layout_constraintTop_toTopOf="@+id/view_tanggal"
+        app:layout_constraintVertical_bias="0.05"
+        android:layout_marginRight="8dp" />
+
+    <ImageView
+        android:id="@+id/view_jam"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginEnd="204dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.209"
+        app:layout_constraintStart_toEndOf="@+id/text_bulan"
+        app:layout_constraintTop_toBottomOf="@+id/btn_navigasi"
+        app:layout_constraintVertical_bias="0.032"
+        app:srcCompat="@drawable/ic_jam"
+        android:layout_marginRight="204dp" />
+
+    <TextView
+        android:id="@+id/text_jam"
+        android:layout_width="139dp"
+        android:layout_height="20dp"
+        android:text="view jam"
+        android:textColor="#393939"
+        android:textSize="15sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintStart_toEndOf="@+id/view_jam"
+        app:layout_constraintTop_toBottomOf="@+id/btn_navigasi"
+        app:layout_constraintVertical_bias="0.032" />
+
+
+    <ImageView
+        android:id="@+id/free_entry"
+        android:layout_width="170dp"
+        android:layout_height="84dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_deskripsi"
+        app:layout_constraintVertical_bias="0.141"
+        app:srcCompat="@drawable/ic_hadircancel" />
+
+    <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+        android:id="@+id/number_btn"
+        android:layout_width="170dp"
+        android:layout_height="61dp"
+        android:elevation="6dp"
+        app:finalNumber="10"
+        app:initialNumber="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.014"
+        app:layout_constraintStart_toEndOf="@+id/free_entry"
+        app:layout_constraintTop_toBottomOf="@+id/text_deskripsi"
+        app:layout_constraintVertical_bias="0.348"
+        app:textSize="16dp">
+    </com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
+
+    <TextView
+        android:id="@+id/harga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100000"
+        android:textColor="#FFFFFF"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/free_entry"
+        app:layout_constraintEnd_toEndOf="@+id/free_entry"
+        app:layout_constraintHorizontal_bias="0.446"
+        app:layout_constraintStart_toStartOf="@+id/free_entry"
+        app:layout_constraintTop_toTopOf="@+id/free_entry"
+        app:layout_constraintVertical_bias="0.39" />
+
+    <Button
+        android:id="@+id/addcart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ADD TO CART"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:background="#F6D40D"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/number_btn" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Deskripsi"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_tanggal"
+        app:layout_constraintVertical_bias="0.035"
+        android:layout_marginLeft="20dp" />
+
+    <TextView
+        android:id="@+id/text_deskripsi"
+        android:layout_width="335dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:lineSpacingExtra="4dp"
+        android:maxLines="7"
+        android:text="Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit, sed do eiusmod tempor incididunt
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat. Duis aute irure dolor in reprehenderit in
+            voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.086"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.0"
+        android:layout_marginLeft="18dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
