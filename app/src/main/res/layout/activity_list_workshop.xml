@@ -22,7 +22,7 @@
             android:layout_marginBottom="@dimen/layout_margin_extra_large"
             android:gravity="center"
             android:maxLines="2"
-            android:text="Workshop"
+            android:text="It's Workshop Events!"
             android:textColor="@color/orange"
             android:textSize="@dimen/text_size_expanded_title_medium"
             android:textStyle="bold" />

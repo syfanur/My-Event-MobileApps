@@ -125,8 +125,6 @@ public class CartActivity extends AppCompatActivity {
                                                 public void onComplete(@NonNull Task<Void> task) {
                                                     if(task.isSuccessful()){
                                                         Toast.makeText(CartActivity.this, "Item Deleted", Toast.LENGTH_SHORT).show();
-                                                        Intent intent = new Intent(CartActivity.this, CartActivity.class);
-                                                        startActivity(intent);
                                                     }
                                                 }
                                             });

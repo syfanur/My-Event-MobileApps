@@ -4,6 +4,8 @@ package com.example.myevent;
 import android.content.Intent;
 import android.os.Bundle;
 
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +20,7 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.squareup.picasso.Picasso;
 
 public class ListEvent extends AppCompatActivity {
@@ -26,21 +29,27 @@ public class ListEvent extends AppCompatActivity {
     RecyclerView recyclerView;
     FirebaseRecyclerOptions<Musik> options;
     FirebaseRecyclerAdapter<Musik,MusikViewHolder>adapter;
-    DatabaseReference DataRef;
+    Query DataRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_event);
 
-        DataRef = FirebaseDatabase.getInstance().getReference().child("Musik");
-        inputSearch = findViewById(R.id.inputSearch);
+        DataRef = FirebaseDatabase.getInstance().getReference().child("Musik")
+                .orderByChild("Kategori")
+                .equalTo("Musik");
         recyclerView = findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager((new LinearLayoutManager(getApplicationContext())));
         recyclerView.setHasFixedSize(true);
 
+
         LoadData();
+
+
+
     }
+
 
     private void LoadData() {
         options = new FirebaseRecyclerOptions.Builder<Musik>().setQuery(DataRef, Musik.class).build();

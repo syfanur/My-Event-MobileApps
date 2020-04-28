@@ -18,28 +18,31 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.squareup.picasso.Picasso;
 
-public class ListSeminar extends AppCompatActivity {
+public class ListAllEvent extends AppCompatActivity {
 
     EditText inputSearch;
     RecyclerView recyclerView;
     FirebaseRecyclerOptions<Musik> options;
-    FirebaseRecyclerAdapter<Musik, MusikViewHolder>adapter;
+    FirebaseRecyclerAdapter<Musik,MusikViewHolder> adapter;
     Query DataRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_seminar);
+        setContentView(R.layout.activity_list_all);
 
-        DataRef = FirebaseDatabase.getInstance().getReference().child("Musik")
-                .orderByChild("Kategori")
-                .equalTo("Seminar");
+        DataRef = FirebaseDatabase.getInstance().getReference().child("Musik");
         recyclerView = findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager((new LinearLayoutManager(getApplicationContext())));
         recyclerView.setHasFixedSize(true);
 
+
         LoadData();
+
+
+
     }
+
 
     private void LoadData() {
         options = new FirebaseRecyclerOptions.Builder<Musik>().setQuery(DataRef, Musik.class).build();
@@ -55,7 +58,7 @@ public class ListSeminar extends AppCompatActivity {
                 holder.v.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent e = new Intent(ListSeminar.this, desc_event.class);
+                        Intent e = new Intent(ListAllEvent.this,desc_event.class);
                         e.putExtra("pid", model.getId());
                         startActivity(e);
                     }

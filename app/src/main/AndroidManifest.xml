@@ -31,10 +31,6 @@
         <activity
             android:name=".ListEvent"
             android:windowSoftInputMode="stateHidden" />
-        <activity
-            android:name=".ListSeminar"
-            android:windowSoftInputMode="stateHidden" />
-        <activity android:name=".ListWorkshop" />
         <activity android:name=".Login" />
         <activity android:name=".Setting" />
         <activity android:name=".metodePembayaran" />
@@ -42,9 +38,18 @@
         <activity android:name=".Profil" />
         <activity android:name=".Homepage" />
         <activity android:name=".Education" />
-        <activity android:name=".ListExhibition" />
         <activity android:name=".desc_event" />
         <activity android:name=".transaksi1" />
+        <activity android:name=".ListAllEvent"
+        android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".AllEventActivity"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".ListExhibition"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".ListWorkshop"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".ListSeminar"
+            android:windowSoftInputMode="stateHidden"/>
         <activity android:name=".Welcome" />
         <activity android:name=".MainActivity">
             <intent-filter>

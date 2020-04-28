@@ -163,6 +163,11 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         startActivity(exh);
     }
 
+    public void allevent(View view) {
+        Intent allevent = new Intent(HomeActivity.this, AllEventActivity.class);
+        startActivity(allevent);
+    }
+
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
