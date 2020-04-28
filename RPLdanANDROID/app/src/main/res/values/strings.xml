@@ -1,11 +1,10 @@
 <resources>
     <string name="app_name">RPLdanANDROID</string>
-    <string name="myevent_text">myEVENT</string>
+    <string name="myevent_text">EXHIBITION</string>
     <string name="exhibition_text">Exhibition</string>
     <string name="detail_event1">Pameran Titik Tahun 2</string>
     <string name="ad_firaous">by AD Firaous</string>
-    <string name="feb">FEB</string>
-    <string name="tanggal_28">28</string>
+    <string name="feb">28 Februari 2021</string>
     <string name="padepokan_seni">Padepokan Seni Mayang</string>
     <string name="view_jam">12.00 WIB | Available</string>
     <string name="free_entry">Free Entry!</string>
@@ -17,7 +16,7 @@
     <string name="padepokan_seni_2">Padepokan Seni Mayang</string>
     <string name="jam_2">12.00 WIB | Available</string>
     <string name="free_entry_2">Free Entry!</string>
-    <string name="bt_cancel">Cancel</string>
+    <string name="text_cancel">Cancel</string>
     <string name="going_event">Going To This Event?</string>
     <string name="cancel_text">Are Sure To Cancel This Event?</string>
     <string name="going_popup">Going to This Event?</string>
@@ -36,7 +35,7 @@
     <string name="tanggal_text_hmpg">15</string>
     <string name="bulan_text_hmpg">FEB</string>
     <string name="text_desc">Description About Pameran Titik Tahun 2</string>
-    <string name="text_desc2">Description about Pameran Titik Tahun 2</string>
+    <string name="text_desc2">Description About Pameran Titik Tahun 2</string>
     <string name="text_myevent2">myEVENT</string>
     <string name="text_eventforyou">Event For You</string>
     <string name="text_bestevent">Best on Trending Event</string>
@@ -62,4 +61,19 @@
     <string name="tersedia_art">20</string>
     <string name="biaya_art">Free Entry</string>
     <string name="image_art">Image Art</string>
+    <string name="username">Username</string>
+    <string name="address">Address</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="text_bahasa">Bahasa</string>
+    <string name="text_setting">PENGATURAN</string>
+    <string name="text_tema">Tema</string>
+
+    <string-array name="bahasa_arrays">
+        <item>Indonesia</item>
+        <item>English</item>
+        <item>한국어</item>
+        <item>عربى</item>
+    </string-array>
+
+
 </resources>

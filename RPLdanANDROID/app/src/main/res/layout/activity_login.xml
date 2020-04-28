@@ -103,7 +103,7 @@
         android:id="@+id/rb_remember"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:buttonTint="@color/myColor"
+        android:buttonTint="@color/orange"
         android:text="@string/remember_me"
         android:textColor="#1A1A1A"
         android:textSize="15sp"
@@ -113,7 +113,7 @@
         app:layout_constraintHorizontal_bias="0.195"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.754" />
+        app:layout_constraintVertical_bias="0.753" />
 
     <ImageButton
         android:id="@+id/bt_login"
@@ -126,8 +126,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.874"
-        app:srcCompat="@drawable/ic_btlogin"
-        android:onClick="ButtonSignIn"/>
+        app:srcCompat="@drawable/ic_btlogin" />
 
     <TextView
         android:id="@+id/text_login2"
@@ -172,7 +171,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/text_regist"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.943" />
+        app:layout_constraintVertical_bias="0.942" />
 
     <ImageView
         android:id="@+id/image_bartop1"

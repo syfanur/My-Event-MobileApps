@@ -8,27 +8,30 @@
     android:background="#FFFFFF"
     tools:context=".DetailEvent">
 
-        <View
+        <ImageView
             android:id="@+id/view_bigevent"
             android:layout_width="428dp"
             android:layout_height="303dp"
-            android:layout_marginBottom="368dp"
-            android:background="@drawable/ic_bigevent"
+            android:background="@drawable/ic_event3"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="380dp"
+            android:scaleType="fitXY"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.529"
             app:layout_constraintStart_toStartOf="parent" />
 
         <View
             android:id="@+id/view_tanggal"
-            android:layout_width="335dp"
-            android:layout_height="175dp"
+            android:layout_width="340dp"
+            android:layout_height="190dp"
             android:background="@drawable/ic_tanggal"
+            android:backgroundTint="#FFFFFF"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.371" />
+            app:layout_constraintVertical_bias="0.392" />
 
         <TextView
             android:id="@+id/text_pameran"
@@ -60,49 +63,22 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.345" />
 
-        <ImageView
-            android:id="@+id/view_jadwal"
-            android:layout_width="71dp"
-            android:layout_height="69dp"
-            android:background="#B8B8B8"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.155"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.437"
-            app:srcCompat="@drawable/ic_tanggal" />
-
         <TextView
             android:id="@+id/text_bulan"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="71dp"
+            android:layout_height="65dp"
+            android:background="@drawable/ic_tanggal"
+            android:gravity="center"
             android:text="@string/feb"
             android:textColor="#FF9900"
             android:textSize="15sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.189"
+            app:layout_constraintHorizontal_bias="0.155"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.424" />
-
-        <TextView
-            android:id="@+id/text_tanggal"
-            android:layout_width="25dp"
-            android:layout_height="24dp"
-            android:gravity="center"
-            android:text="@string/tanggal_28"
-            android:textColor="#393939"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.189"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.462" />
+            app:layout_constraintVertical_bias="0.459" />
 
         <TextView
             android:id="@+id/text_lokasi"
@@ -159,11 +135,10 @@
             app:srcCompat="@drawable/ic_hadircancel" />
 
         <ImageButton
-            android:id="@+id/buttonhadir"
+            android:id="@+id/attend"
             android:layout_width="172dp"
             android:layout_height="80dp"
             android:background="#FFFFFF"
-            android:onClick="ButtonHadir"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
@@ -173,7 +148,7 @@
             app:srcCompat="@drawable/ic_hadircancel" />
 
         <TextView
-            android:id="@+id/text_free"
+            android:id="@+id/harga"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/free_entry"
@@ -195,11 +170,11 @@
             android:textColor="#FFFFFF"
             android:textSize="15sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/buttonhadir"
-            app:layout_constraintEnd_toEndOf="@+id/buttonhadir"
+            app:layout_constraintBottom_toBottomOf="@+id/attend"
+            app:layout_constraintEnd_toEndOf="@+id/attend"
             app:layout_constraintHorizontal_bias="0.503"
-            app:layout_constraintStart_toStartOf="@+id/buttonhadir"
-            app:layout_constraintTop_toTopOf="@+id/buttonhadir"
+            app:layout_constraintStart_toStartOf="@+id/attend"
+            app:layout_constraintTop_toTopOf="@id/attend"
             app:layout_constraintVertical_bias="0.433" />
 
         <ImageView
@@ -263,7 +238,7 @@
             android:textColor="#000000"
             android:textSize="15sp"
             android:textStyle="normal"
-            app:layout_constraintBottom_toTopOf="@+id/buttonhadir"
+            app:layout_constraintBottom_toTopOf="@+id/attend"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"

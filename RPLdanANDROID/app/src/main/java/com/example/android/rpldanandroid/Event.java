@@ -1,30 +1,41 @@
 package com.example.android.rpldanandroid;
 
 
-
 public class Event {
 
-    private String Title, Alamat, Tanggal, Tersedia, Biaya, Image;
+    private String Id, Judul, Alamat, Tanggal, Jam, Penyelenggara, Tiket, Harga, Deskripsi, Poster;
 
-    public Event(String title, String alamat, String tanggal, String tersedia, String biaya, String image) {
-        Title = title;
+    public Event(String id, String judul, String alamat, String tanggal, String jam, String penyelenggara, String tiket, String harga, String deskripsi, String poster) {
+        Id = id;
+        Judul = judul;
         Alamat = alamat;
         Tanggal = tanggal;
-        Tersedia = tersedia;
-        Biaya = biaya;
-        Image = image;
+        Jam = jam;
+        Penyelenggara = penyelenggara;
+        Tiket = tiket;
+        Harga = harga;
+        Deskripsi = deskripsi;
+        Poster = poster;
     }
 
-    public Event(){
+    public Event() {
 
     }
 
-    public String getTitle() {
-        return Title;
+    public String getId() {
+        return Id;
     }
 
-    public void setTitle(String title) {
-        Title = title;
+    public void setId(String id) {
+        Id = id;
+    }
+
+    public String getJudul() {
+        return Judul;
+    }
+
+    public void setTitle(String judul) {
+        Judul = judul;
     }
 
     public String getAlamat() {
@@ -43,27 +54,52 @@ public class Event {
         Tanggal = tanggal;
     }
 
-    public String getTersedia() {
-        return Tersedia;
+    public String getJam() {
+        return Jam;
     }
 
-    public void setTersedia(String tersedia) {
-        Tersedia = tersedia;
+    public void setJam(String jam) {
+        Jam = jam;
     }
 
-    public String getBiaya() {
-        return Biaya;
+    public String getPenyelenggara() {
+        return Penyelenggara;
     }
 
-    public void setBiaya(String biaya) {
-        Biaya = biaya;
+    public void setPenyelenggara(String penyelenggara) {
+        Penyelenggara = penyelenggara;
     }
 
-    public String getImage() {
-        return Image;
+    public String getTiket() {
+        return Tiket;
     }
 
-    public void setImage(String image) {
-        Image = image;
+    public void setTiket(String tiket) {
+        Tiket = tiket;
+    }
+
+    public String getHarga() {
+        return Harga;
+    }
+
+    public void setHarga(String harga) {
+        Harga = harga;
+    }
+
+    public String getDeskripsi() {
+        return Deskripsi;
+    }
+
+    public void setDeskripsi(String deskripsi) {
+        Deskripsi = deskripsi;
+    }
+
+    public String getPoster() {
+        return Poster;
+    }
+
+    public void setPoster(String poster) {
+        Poster = poster;
     }
 }
+

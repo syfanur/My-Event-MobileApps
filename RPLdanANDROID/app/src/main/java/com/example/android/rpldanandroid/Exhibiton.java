@@ -5,14 +5,10 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
-import android.widget.ImageView;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
@@ -24,33 +20,42 @@ public class Exhibiton extends AppCompatActivity {
     RecyclerView recyclerView;
     FirebaseRecyclerOptions<Event> options;
     FirebaseRecyclerAdapter<Event, ExhibitionViewHolder> adapter;
-    DatabaseReference databaseReference;
+    DatabaseReference DataRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exhibiton);
 
-        databaseReference = FirebaseDatabase.getInstance().getReference().child("Exhibition");
+        DataRef = FirebaseDatabase.getInstance().getReference().child("Exhibition");
+
         recyclerView = findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager((new LinearLayoutManager(getApplicationContext())));
         recyclerView.setHasFixedSize(true);
 
         LoadData();
-
     }
 
     private void LoadData() {
-        options = new FirebaseRecyclerOptions.Builder<Event>().setQuery(databaseReference, Event.class).build();
+        options = new FirebaseRecyclerOptions.Builder<Event>().setQuery(DataRef, Event.class).build();
         adapter = new FirebaseRecyclerAdapter<Event, ExhibitionViewHolder>(options) {
             @Override
-            protected void onBindViewHolder(@NonNull ExhibitionViewHolder holder, int position, @NonNull Event model) {
-                holder.mtitle.setText(model.getTitle());
+            protected void onBindViewHolder(@NonNull ExhibitionViewHolder holder, int position, @NonNull final Event model) {
+                holder.mjudul.setText(model.getJudul());
                 holder.malamat.setText(model.getAlamat());
                 holder.mtanggal.setText(model.getTanggal());
-                holder.mtersedia.setText(model.getTersedia());
-                holder.mbiaya.setText(model.getBiaya());
-                Picasso.get().load(model.getImage()).into(holder.mimageview);
+                holder.mtiket.setText(model.getTiket());
+                holder.mharga.setText(model.getHarga());
+                Picasso.get().load(model.getPoster()).into(holder.mposter);
+
+                holder.v.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent e = new Intent(Exhibiton.this, DetailEvent.class);
+                        e.putExtra("pid", model.getId());
+                        startActivity(e);
+                    }
+                });
             }
 
             @NonNull

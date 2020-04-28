@@ -6,9 +6,8 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
-
+import com.google.firebase.auth.FirebaseAuth;
 import com.smarteist.autoimageslider.DefaultSliderView;
 import com.smarteist.autoimageslider.IndicatorAnimations;
 import com.smarteist.autoimageslider.SliderLayout;
@@ -76,9 +75,9 @@ public class Homepage extends AppCompatActivity {
 
     public void ButtonSignOut(View view) {
 
-        Intent intent = new Intent(getApplicationContext(),Login.class);
-        startActivity(intent);
+        FirebaseAuth.getInstance().signOut();
         finish();
+        startActivity(new Intent(Homepage.this, Login.class));
     }
 
 }
