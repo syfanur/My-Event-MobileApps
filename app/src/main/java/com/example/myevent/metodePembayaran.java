@@ -19,7 +19,7 @@ public class metodePembayaran extends AppCompatActivity {
         setContentView(R.layout.activity_metode_pembayaran);
 
         btMandiri = (Button) findViewById(R.id.btMandiri);
-        btBni = (Button) findViewById(R.id.btBni);
+
 
         btMandiri.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,7 +41,7 @@ public class metodePembayaran extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 //jika tombol diklik akan berpindah ke activity selanjutnya
-                Intent e = new Intent(getApplicationContext(),DetailPembayaran.class);
+                Intent e = new Intent(getApplicationContext(),uploadBukti.class);
                 startActivity(e);
             }
         })
@@ -56,12 +56,7 @@ public class metodePembayaran extends AppCompatActivity {
 
         alertDialog.show();
 
-        btBni.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showDialog();
-            }
-        });
+
     }
 
 }

@@ -1,82 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="#FFFFFF">
+    android:layout_height="match_parent"
+    tools:context=".riwayatPembayaran">
 
-    <RelativeLayout
+    <LinearLayout
+        android:id="@+id/layout"
         android:layout_width="match_parent"
-        android:layout_height="130dp"
-        android:background="@color/white_smoke"
-        android:layout_marginBottom="10dp">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_large">
 
-        <ImageView
-            android:id="@+id/poster"
-            android:layout_width="90dp"
-            android:layout_height="125dp"
-            android:layout_marginLeft="5dp"
-            android:onClick="event"
-            android:scaleType="fitXY"
-            android:src="@drawable/playlistlove" />
 
-        <RelativeLayout
-            android:id="@+id/movieDetails"
-            android:layout_width="wrap_content"
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_toRightOf="@id/poster">
+            android:layout_marginTop="@dimen/layout_margin_medium"
+            android:layout_marginBottom="@dimen/layout_margin_extra_large"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="History"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/text_size_expanded_title_medium"
+            android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/judul"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Playlist Love Festival"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
-            <TextView
-                android:id="@+id/kategori"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/judul"
-                android:layout_margin="10px"
-                android:layout_marginStart="10px"
-                android:layout_marginTop="10px"
-                android:layout_marginEnd="10px"
-                android:text="Music"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
+    </LinearLayout>
 
-            <TextView
-                android:id="@+id/alamat"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/kategori"
-                android:layout_marginStart="10px"
-                android:layout_marginTop="10px"
-                android:layout_marginEnd="10px"
-                android:layout_marginBottom="10px"
-                android:text="TNI AU Husein Sastranegara"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
-
-        </RelativeLayout>
-
-        <Button
-            android:id="@+id/bt_status"
-            android:layout_width="73dp"
-            android:layout_height="30dp"
-            android:layout_below="@+id/movieDetails"
-            android:layout_alignEnd="@+id/movieDetails"
-            android:layout_marginStart="13dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="137dp"
-            android:layout_toEndOf="@+id/poster"
-            android:background="#FFAB40"
-            android:text="Button" />
-
-
-    </RelativeLayout>
-
-</LinearLayout>
+</RelativeLayout>

@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".OrderActivity" />
         <activity android:name=".DetailPembayaranBNI"></activity>
         <activity android:name=".upload_bukti_bni"></activity>
         <activity android:name=".riwayatPembayaran" />
@@ -31,6 +32,7 @@
         <activity android:name=".transaksi1" />
         <activity android:name=".Welcome" />
         <activity android:name=".MainActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

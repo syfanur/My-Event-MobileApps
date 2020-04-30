@@ -4,14 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
 import android.content.res.TypedArray;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ListView;
-import android.widget.SimpleAdapter;
+
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class ListEvent extends AppCompatActivity {
     private RecyclerView mRecyclerView;
@@ -24,7 +20,7 @@ public class ListEvent extends AppCompatActivity {
         setContentView(R.layout.activity_list_event);
 
         // Initialize the RecyclerView.
-        mRecyclerView = findViewById(R.id.recycler_view);
+        mRecyclerView = findViewById(R.id.recycler_view1);
 
         // Get the appropriate column count.
         int gridColumnCount = getResources().getInteger(R.integer.grid_column_count);

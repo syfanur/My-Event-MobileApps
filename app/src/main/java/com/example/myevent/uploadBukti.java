@@ -62,7 +62,7 @@ public class uploadBukti extends AppCompatActivity {
 
 
                 progressDialog.incrementProgressBy((int) progress);
-                Intent e = new Intent(getApplicationContext(), riwayatPembayaran.class);
+                Intent e = new Intent(getApplicationContext(), OrderActivity.class);
                 startActivity(e);
             }
 
@@ -72,7 +72,7 @@ public class uploadBukti extends AppCompatActivity {
         new CountDownTimer(59000, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
-                textView.setText("" +millisUntilFinished / 1000 + "Batas Pembayaran Selesai");
+                textView.setText("" +millisUntilFinished / 1000 + "m");
             }
 
             @Override
