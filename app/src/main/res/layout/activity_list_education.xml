@@ -54,11 +54,11 @@
         android:orientation="horizontal">
 
         <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Seminar"
-        android:textSize="18sp"
-        android:layout_marginLeft="80dp"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="Seminar"
+            android:textSize="18sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -199,14 +199,5 @@
             android:textSize="18sp"
             android:layout_marginLeft="40dp"/>
     </LinearLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="see all"
-        android:textColor="@color/orange"
-        android:textSize="20sp"
-        android:layout_marginLeft="200dp"/>
 
 </LinearLayout>

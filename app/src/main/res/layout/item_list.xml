@@ -9,7 +9,8 @@
         android:layout_width="match_parent"
         android:layout_height="130dp"
         android:background="@color/white_smoke"
-        android:layout_marginBottom="10dp">
+        android:layout_marginBottom="10dp"
+        >
 
         <ImageView
             android:id="@+id/poster"
@@ -31,37 +32,44 @@
                 android:id="@+id/judul"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:maxLines="1"
                 android:text="Playlist Love Festival"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/alamat"
+                android:maxLines="1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/judul"
-                android:layout_margin="10px"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="10px"
                 android:text="Bandung"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/tanggal"
+                android:maxLines="1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/alamat"
-                android:layout_margin="10px"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="10px"
                 android:text="31 Agustus 2000"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
             <TextView
-                android:id="@+id/tiket"
+                android:id="@+id/harga"
+                android:maxLines="1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tanggal"
-                android:layout_margin="10px"
-                android:text="Not Available"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="10px"
+                android:text="Rp. 100.000"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
         </RelativeLayout>

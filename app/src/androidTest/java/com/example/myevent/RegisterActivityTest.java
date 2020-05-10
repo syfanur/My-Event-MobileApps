@@ -26,27 +26,27 @@
 
         @Test
         public void emailInputEditable(){
-            onView(withId(R.id.editText6)).perform(typeText(email), closeSoftKeyboard());
+            onView(withId(R.id.register_email)).perform(typeText(email), closeSoftKeyboard());
         }
 
         @Test
         public void nameInputEditable(){
-            onView(withId(R.id.editText)).perform(typeText(name), closeSoftKeyboard());
+            onView(withId(R.id.register_phone_input)).perform(typeText(name), closeSoftKeyboard());
         }
 
         @Test
         public void passwordInputEditable(){
-            onView(withId(R.id.editText7)).perform(typeText(password), closeSoftKeyboard());
+            onView(withId(R.id.register_password_input)).perform(typeText(password), closeSoftKeyboard());
         }
 
         @Test
         public void cpasswordInputEditable(){
-            onView(withId(R.id.editText8)).perform(typeText(c_password), closeSoftKeyboard());
+            onView(withId(R.id.register_confirm_password)).perform(typeText(c_password), closeSoftKeyboard());
         }
 
         @Test
         public void usernameInputEditable(){
-            onView(withId(R.id.editText5)).perform(typeText(username), closeSoftKeyboard());
+            onView(withId(R.id.register_username_input)).perform(typeText(username), closeSoftKeyboard());
         }
 
 

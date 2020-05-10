@@ -1,5 +1,6 @@
 package com.example.myevent;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -14,51 +15,72 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.HashMap;
 
 
 public class Detail_Seminar extends AppCompatActivity {
 
+    private ImageView mposter;
+    TextView mjudul, mtanggal, mharga, malamat, mjam, mpenyelenggara, mdeskripsi;
+    private ElegantNumberButton numberButton;
+    DatabaseReference ref, DataRef;
+    private String id = "";
+    private Button addcart;
+
 
     /*Deklarasi variable*/
-    Button btn_navigasi;
+    TextView btn_navigasi;
     String goolgeMap = "com.google.android.apps.maps"; // identitas package aplikasi google masps android
     Uri gmmIntentUri;
     Intent mapIntent;
     String bandung = "-6.973700, 107.629233"; // koordinat
 
 
+
+
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_desc_event);
+        setContentView(R.layout.detail_seminar);
 
-        // Initialize the views.
-        TextView Judul = findViewById(R.id.text_pameran);
-        ImageView Poster = findViewById(R.id.view_bigevent);
-        TextView Penyelenggara = findViewById(R.id.text_author);
-        TextView Bulan = findViewById(R.id.text_bulan);
-        TextView Tanggal = findViewById(R.id.text_tanggal);
-        TextView Jam = findViewById(R.id.text_jam);
-        TextView Harga = findViewById(R.id.harga);
-        Button Alamat = findViewById(R.id.btn_navigasi);
+        id = getIntent().getStringExtra("pid");
 
-        // Set the text from the Intent extra.
-        Judul.setText(getIntent().getStringExtra("title"));
-        Penyelenggara.setText(getIntent().getStringExtra("penyelenggara"));
-        Tanggal.setText(getIntent().getStringExtra("tgl"));
-        Bulan.setText(getIntent().getStringExtra("bulan"));
-        Jam.setText(getIntent().getStringExtra("jam"));
-        Alamat.setText(getIntent().getStringExtra("tempat"));
-        Harga.setText(getIntent().getStringExtra("harga"));
-        // Load the image using the Glide library and the Intent extra.
-        Glide.with(this)
-                .load(getIntent()
-                        .getIntExtra("image_resource",0))
-                .into(Poster);
+        mjudul = findViewById(R.id.text_pameran);
+        malamat = findViewById(R.id.btn_navigasi);
+        mtanggal = findViewById(R.id.text_bulan);
+        mharga = findViewById(R.id.harga);
+        mposter = findViewById(R.id.view_bigevent);
+        mjam = findViewById(R.id.text_jam);
+        mpenyelenggara = findViewById(R.id.text_author);
+        mdeskripsi = findViewById(R.id.text_deskripsi);
+        addcart = findViewById(R.id.addcart);
+        numberButton = findViewById(R.id.number_btn);
+
+        getProductDetails(id);
+
+
+        addcart.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                addingToCartList();
+            }
+        });
 
 
         // menyamakan variable pada layout activity_main.xml
-        btn_navigasi    = (Button) findViewById(R.id.btn_navigasi);
+        btn_navigasi = (TextView) findViewById(R.id.btn_navigasi);
 
         // tombol untuk menjalankan navigasi goolge maps intents
         btn_navigasi.setOnClickListener(new View.OnClickListener() {
@@ -86,11 +108,68 @@ public class Detail_Seminar extends AppCompatActivity {
 
     }
 
-    public void attend(View view) {
-        Intent a = new Intent(getApplicationContext(),transaksi1.class);
-        startActivity(a);
+    private void getProductDetails(String id) {
+        DatabaseReference productsRef = FirebaseDatabase.getInstance().getReference().child("Seminar");
+
+        productsRef.child(id).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()) {
+                    seminar m = dataSnapshot.getValue(seminar.class);
+
+                    Picasso.get().load(m.getPoster()).into(mposter);
+                    mjudul.setText(m.getJudul());
+                    malamat.setText(m.getAlamat());
+                    mtanggal.setText(m.getTanggal());
+                    mjam.setText(m.getJam());
+                    mpenyelenggara.setText("By " + m.getPenyelenggara());
+                    mdeskripsi.setText(m.getDeskripsi());
+                    mharga.setText(m.getHarga());
+
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+
     }
 
 
+    private void addingToCartList() {
+        String saveCurrentTime, saveCurrentDate;
+        Calendar calForDate = Calendar.getInstance();
+        SimpleDateFormat currentDate = new SimpleDateFormat("MMM dd, yyyy");
+        saveCurrentDate = currentDate.format(calForDate.getTime());
+        SimpleDateFormat currentTime = new SimpleDateFormat("MMM dd, yyyy");
+        saveCurrentTime = currentDate.format(calForDate.getTime());
 
+        final DatabaseReference cartListRef = FirebaseDatabase.getInstance().getReference().child("CartList");
+        final HashMap<String, Object> cartMap = new HashMap<>();
+        cartMap.put("pid", id);
+        cartMap.put("pname", mjudul.getText().toString());
+        cartMap.put("price", mharga.getText().toString());
+        cartMap.put("date", saveCurrentDate);
+        cartMap.put("time", saveCurrentTime);
+        cartMap.put("quantity", numberButton.getNumber());
+
+        cartListRef.child("User View").child(Prevalent.currentOnlineUser.getPhone()).child("Seminar").child(id)
+                .updateChildren(cartMap)
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if(task.isSuccessful()){
+                            Toast.makeText(Detail_Seminar.this, "add to cart", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent (Detail_Seminar.this, HomeActivity.class);
+                            startActivity(intent);
+
+                        }
+                    }
+                });
+
+
+    }
 }

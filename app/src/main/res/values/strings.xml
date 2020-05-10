@@ -1,12 +1,12 @@
 <resources>
-    <string name="app_name" translatable="false">My Event</string>
-    <string name="welcome" translatable="false">Welcoming Page</string>
-    <string name="transaksi">Transaksi</string>
-    <string name="list" translatable="false">List Event</string>
+
     <string-array name="bahasa_arrays">
         <item>Indonesia</item>
         <item>English</item>
+        <item>한국어</item>
+        <item>عربى</item>
     </string-array>
+
 
     <string-array name="mode_arrays">
         <item>Dark</item>
@@ -101,7 +101,10 @@ Epik High, Phum Viphurit, MYMP, Sheila On
 7, Raisa, Afgan, Glenn Fredly, dan masih
 banyak lagi.</item>
     </string-array>
-
+    <string name="app_name">My Event</string>
+    <string name="welcome">Welcoming Page</string>
+    <string name="transaksi">Transaksi</string>
+    <string name="list">List Event</string>
     <string name="myevent_text">myEVENT</string>
     <string name="exhibition_text">Exhibition</string>
     <string name="art_3">Art 3</string>
@@ -322,7 +325,35 @@ banyak lagi.</item>
         <item>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.".</item>
         <item>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</item>
     </string-array>
+    <string name="text_bahasa">Bahasa</string>
+    <string name="text_tema">Theme</string>
+    <string name="text_setting">SETTING</string>
+    <string name="close">Back</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <string name="home_second">Home Second</string>
+
+    <string name="text_deskripsi1">Pameran Titik Tahun 2 adalah pameran seni rupa dunia terbesar dunia yang bakal digelar Kota Bandung Acara ini diselenggarakan pada tanggal 28 Februari 2020 pukul 12.00 WIB di Padepokan Seni Mayang</string>
+    <string name="title_art">Pameran Titik Tahun 2</string>
+    <string name="almat_art">Bale Tonggoh, Selasar Sunarya</string>
+    <string name="tanggal_art">16 Oktober 2020</string>
+    <string name="tersedia_art">20</string>
+    <string name="biaya_art">Free Entry</string>
+    <string name="image_art">Image Art</string>
+    <string name="username">Username</string>
+    <string name="address">Address</string>
+    <string name="desc">My Event is an application that provides information about events in Indonesia, especially Bandung, my Event has several categories of events including Music events, Exhibitions, Seminars, and workshops. Some events also provide paid and free tickets</string>
+    <string name="tentang">About</string>
+
+
 </resources>

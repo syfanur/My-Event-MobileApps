@@ -1,67 +1,93 @@
 package com.example.myevent;
 
-
 public class Musik {
 
-    private String title;
-    private String info;
-    private String tanggal;
-    private String tiket, penyelenggara, bulan, tanggaal, jam, fee;
+    private String Judul, Alamat, Tanggal, Harga, Poster, Id, Jam, Penyelenggara, Deskripsi;
 
-    private int imageResource;
-
-    public Musik(){
-
+    public Musik() {
     }
 
-    public Musik(String title, String info, String tanggal, String tiket, String penyelenggara,
-                 String bulan, String tanggaal, String jam, String harga, int imageResource) {
-        this.title = title;
-        this.info = info;
-        this.tanggal = tanggal;
-        this.tiket = tiket;
-        this.penyelenggara = penyelenggara;
-        this.bulan = bulan;
-        this.tanggaal = tanggaal;
-        this.jam = jam;
-        this.fee = harga;
-        this.imageResource = imageResource;
+    public Musik(String judul, String alamat, String tanggal, String harga, String poster, String id, String jam, String penyelenggara, String deskripsi) {
+        Judul = judul;
+        Alamat = alamat;
+        Tanggal = tanggal;
+        Harga = harga;
+        Poster = poster;
+        Id = id;
+        Jam = jam;
+        Penyelenggara = penyelenggara;
+        Deskripsi = deskripsi;
     }
 
-
-    String getTitle() {
-        return title;
-    }
-    String getTanggal() {
-        return tanggal;
-    }
-    String getBy() {
-        return penyelenggara;
-    }
-    String getBulan() {
-        return bulan;
-    }
-    String getTgl() {
-        return tanggaal;
-    }
-    String getJam() {
-        return jam;
-    }
-    String getHarga() {
-        return fee;
-    }
-    String getTiket() { return tiket;
-    }
-    /**
-     * Gets the info about the sport.
-     *
-     * @return The info about the sport.
-     */
-    String getInfo() {
-        return info;
+    public String getJudul() {
+        return Judul;
     }
 
-    public int getImageResource() {
-        return imageResource;
+    public void setJudul(String judul) {
+        Judul = judul;
+    }
+
+    public String getAlamat() {
+        return Alamat;
+    }
+
+    public void setAlamat(String alamat) {
+        Alamat = alamat;
+    }
+
+    public String getTanggal() {
+        return Tanggal;
+    }
+
+    public void setTanggal(String tanggal) {
+        Tanggal = tanggal;
+    }
+
+    public String getHarga() {
+        return Harga;
+    }
+
+    public void setHarga(String harga) {
+        Harga = harga;
+    }
+
+    public String getPoster() {
+        return Poster;
+    }
+
+    public void setPoster(String poster) {
+        Poster = poster;
+    }
+
+    public String getId() {
+        return Id;
+    }
+
+    public void setId(String id) {
+        Id = id;
+    }
+
+    public String getJam() {
+        return Jam;
+    }
+
+    public void setJam(String jam) {
+        Jam = jam;
+    }
+
+    public String getPenyelenggara() {
+        return Penyelenggara;
+    }
+
+    public void setPenyelenggara(String penyelenggara) {
+        Penyelenggara = penyelenggara;
+    }
+
+    public String getDeskripsi() {
+        return Deskripsi;
+    }
+
+    public void setDeskripsi(String deskripsi) {
+        Deskripsi = deskripsi;
     }
 }

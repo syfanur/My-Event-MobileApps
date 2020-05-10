@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListEvent">
+    >
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -26,7 +26,8 @@
             android:textStyle="bold"
             android:layout_marginTop="@dimen/layout_margin_medium"
             android:layout_marginBottom="@dimen/layout_margin_extra_large"
-            android:text="Event Music" />
+            android:text="It's Music Event!" />
+
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view"

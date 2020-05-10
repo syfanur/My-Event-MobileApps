@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:maxLines="2"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="Let's promote your event, upload your event here!"
+        android:background="@drawable/header2"
+        android:padding="7dp"
+        android:gravity="center"
+        android:textSize="20dp"/>
+    <ImageView
+        android:id="@+id/ImageView"
+        android:layout_width="220dp"
+        android:layout_centerHorizontal="true"
+        android:foregroundGravity="center"
+        android:layout_height="210dp"
+        android:layout_marginTop="80dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_image" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Judul"
+        android:id="@+id/inputJudul"
+        android:layout_below="@+id/ImageView"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Alamat"
+        android:id="@+id/inputAlamat"
+        android:layout_below="@+id/inputJudul"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tanggal"
+        android:id="@+id/inputTanggal"
+        android:layout_below="@+id/inputAlamat"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Harga"
+        android:id="@+id/inputHarga"
+        android:layout_below="@+id/inputTanggal"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Deskripsi"
+        android:id="@+id/inputDesc"
+        android:layout_below="@+id/inputHarga"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Jam"
+        android:id="@+id/inputJam"
+        android:layout_below="@+id/inputDesc"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Penyelenggara"
+        android:id="@+id/inputPenyelenggara"
+        android:layout_below="@+id/inputJam"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewProgress"
+        android:layout_below="@+id/inputPenyelenggara"
+        android:text="0.0%"
+        android:gravity="center"
+        android:textSize="25dp" />
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_below="@+id/textViewProgress"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Upload"
+        android:id="@+id/btnUpload"
+        android:layout_below="@+id/progressBar"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"/>
+
+</RelativeLayout>

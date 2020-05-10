@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_cart"
+            android:icon="@drawable/shop"
+            android:title="Carts"
+            android:iconTint="@color/white"/>
+        <item
+            android:id="@+id/nav_orders"
+            android:icon="@drawable/order"
+            android:title="Orders"
+            android:iconTint="@color/white" />
+        <item
+            android:id="@+id/nav_upload"
+            android:icon="@drawable/baseline_cloud_upload_black_18dp"
+            android:title="Promote your Event here"
+            android:iconTint="@color/white"/>
+        <item
+            android:id="@+id/nav_editprofil"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Edit Profile"
+            android:iconTint="@color/white"/>
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings"
+            android:title="Settings"
+            android:iconTint="@color/white"/>
+
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/baseline_exit_to_app_black_18dp"
+            android:title="Logout"
+            android:iconTint="@color/white"/>
+    </group>
+</menu>

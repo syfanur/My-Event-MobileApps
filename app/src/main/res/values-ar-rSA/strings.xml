@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">My Event</string>
+    <string name="text_setting">ضبط</string>
+    <string name="text_bahasa">لغة</string>
+    <string name="text_tema">المواضيع</string>
+    <string name="close">قريب</string>
+
+    <string name="myevent_text">myEVENT</string>
+    <string name="exhibition_text">Exhibition</string>
+    <string name="art_3">Art 3</string>
+    <string name="text_alamat">Bale Tonggoh, Selasar Sunarya</string>
+    <string name="text_tanggal">16 Oktober 2020</string>
+    <string name="text_tiket">Ticket Left = 20</string>
+    <string name="text_biaya">FREE ENTRY!</string>
+    <string name="kumur_kumur">Kumur Kumur</string>
+    <string name="text2_alamat">Galeri Soemardja ITB</string>
+    <string name="text2_tanggal">22 Maret 2020</string>
+    <string name="text2_tiket">Ticket Left = 2</string>
+    <string name="text2_biaya">Rp.10.000,00</string>
+    <string name="pameran_titik">Pameran Titik Tahun 2</string>
+    <string name="text3_alamat">Padepokan Seni Maya Sunda</string>
+    <string name="text3_tanggal">Februari 2020</string>
+    <string name="text3_tiket">Available</string>
+    <string name="text3_biaya">Free Entry!</string>
+    <string name="text4_judul">Sakola</string>
+    <string name="text4_alamat">Gedung PPK</string>
+    <string name="text4_tanggal">5 Desember 2020</string>
+    <string name="text4_tiket">Available</string>
+    <string name="text4_biaya">Rp. 30.000,00</string>
+    <string name="detail_event1">Pameran Titik Tahun 2</string>
+    <string name="ad_firaous">by AD Firaous</string>
+    <string name="feb">FEB</string>
+    <string name="tanggal_28">28</string>
+    <string name="padepokan_seni">Padepokan Seni Mayang</string>
+    <string name="view_jam">12.00 WIB | Available</string>
+    <string name="free_entry">Free Entry!</string>
+    <string name="text_going">Going!</string>
+    <string name="pameran_titik_2">Pameran Titik Tahun 2</string>
+    <string name="ad_firaous_2">by AD Firaous</string>
+    <string name="feb_2">FEB</string>
+    <string name="tanggal_28_2">28</string>
+    <string name="padepokan_seni_2">Padepokan Seni Mayang</string>
+    <string name="jam_2">12.00 WIB | Available</string>
+    <string name="free_entry_2">Free Entry!</string>
+    <string name="bt_cancel">Cancel</string>
+    <string name="going_event">Going To This Event?</string>
+    <string name="cancel_text">Are Sure to Cancel?</string>
+    <string name="going_popup">Going to This Event?</string>
+    <string name="yes_text_cancel">Yes</string>
+    <string name="no_text_cancel">No</string>
+    <string name="allev_text">All Event</string>
+    <string name="music_text">Music</string>
+    <string name="edu_text">Education</string>
+    <string name="art_text">Exhibition</string>
+    <string name="yes_text">Yes</string>
+    <string name="no_text">No</string>
+    <string name="tangtangan_bisnis">Menghadapi Tangtangan Bisnis 2020</string>
+    <string name="hosted_by">Hosted By: insightTDay</string>
+    <string name="person_text">100</string>
+    <string name="jam_text_hmpg">08.00 - selesai</string>
+    <string name="tanggal_text_hmpg">15</string>
+    <string name="bulan_text_hmpg">FEB</string>
+    <string name="text_desc">Description About Pameran Titik Tahun 2</string>
+    <string name="text_desc2">Description about Pameran Titik Tahun 2</string>
+    <string name="text_myevent2">myEVENT</string>
+    <string name="text_eventforyou">حدث لك</string>
+    <string name="text_bestevent">الأفضل في الأحداث الشائعة</string>
+    <string name="text_myevent3">myEVENT</string>
+    <string name="text_started">Lets Attend Your Favourite Event</string>
+    <string name="text_getstarted">Get Started</string>
+    <string name="welcome">Welcoming Page</string>
+    <string name="transaksi">Transaksi</string>
+    <string name="list">List Event</string>
+
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <string name="home_second">Home Second</string>
+
+    <string name="text_deskripsi1">Pameran Titik Tahun 2 adalah pameran seni rupa dunia terbesar dunia yang bakal digelar Kota Bandung Acara ini diselenggarakan pada tanggal 28 Februari 2020 pukul 12.00 WIB di Padepokan Seni Mayang</string>
+    <string name="title_art">Pameran Titik Tahun 2</string>
+    <string name="almat_art">Bale Tonggoh, Selasar Sunarya</string>
+    <string name="tanggal_art">16 Oktober 2020</string>
+    <string name="tersedia_art">20</string>
+    <string name="biaya_art">Free Entry</string>
+    <string name="image_art">Image Art</string>
+    <string name="username">Username</string>
+    <string name="address">Address</string>
+    <string name="tentang">حول</string>
+    <string name="desc">My Event هو تطبيق يوفر معلومات حول الأحداث في إندونيسيا ، وخاصة Bandung ، يحتوي My Event على فئات عديدة من الأحداث بما في ذلك الأحداث الموسيقية والمعارض والندوات وورش العمل. توفر بعض الأحداث أيضًا تذاكر مدفوعة ومجانية</string>
+
+
+</resources>
